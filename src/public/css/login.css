@@ -1,0 +1,13 @@
+.login-div input[type=text],.login-div input[type=password] {
+    height: 45px;
+    border-radius: 2px;
+}
+input.btn.btn-primary.login-btn {
+    padding: 10px 25px;
+    font-size: 18px;
+}
+.col-md-12.logo {
+    background: #36d996;
+    padding: 10px;
+    margin-bottom: 15px;
+}

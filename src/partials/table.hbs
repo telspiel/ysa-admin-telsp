@@ -1,0 +1,121 @@
+<table id="{{ id }}" class="table table-striped table-sm table-bordered dt-responsive nowrap" width="100%">
+  <thead>
+    <tr>
+      {{#each formattedTableHeader }}
+      <th>{{this}}</th>
+      {{/each}}
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="routingTh">
+      <td colspan="4">
+        <label for="TRANS"><i class="fa fa-minus-square" aria-hidden="true"></i>&nbsp;&nbsp;TRANS</label>
+        <input type="checkbox" name="TRANS" id="TRANS" data-toggle="toggle">
+      </td>
+      <td><button type="button" name="TRANS" class="btn btn-info btn-sm addModal" href="#">
+          <i class="fa fa-plus"></i> Add</button> &nbsp;&nbsp;&nbsp;<button type="button" name="TRANS"
+          class="btn btn-success btn-sm saveRouting"><i class="fa fa-save"></i> Save</button></td>
+    </tr>
+  <tbody class="hide">
+    {{#each transRoutingData }}
+    <tr class="TRANS routingRow">
+      {{#each this }}
+      <td data-id="0">{{ this }}</td>
+      {{/each}}
+      <td>
+        <button type="button" name="TRANS" class="btn btn-outline-primary btn-sm editModal" href="#">
+          <i class="fa fa-pencil"></i>
+        </button> &nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-outline-danger btn-sm deleteRow">
+          <i class="fa fa-trash"></i>
+        </button>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+
+  <tr class="routingTh">
+    <td colspan="4">
+      <label for="PROMO"><i class="fa fa-minus-square" aria-hidden="true"></i>&nbsp;&nbsp;PROMO</label>
+      <input type="checkbox" name="PROMO" id="PROMO" data-toggle="toggle">
+    </td>
+    <td><button type="button" name="PROMO" class="btn btn-info btn-sm addModal" href="#"><i class="fa fa-plus"></i>
+        Add</button> &nbsp;&nbsp;&nbsp;<button type="button" name="PROMO" class="btn btn-success btn-sm saveRouting"><i
+          class="fa fa-save"></i>
+        Save</button></td>
+  </tr>
+  <tbody class="hide">
+    {{#each promoRoutingData }}
+    <tr class="PROMO routingRow">
+      {{#each this }}
+      <td data-id="0">{{ this }}</td>
+      {{/each}}
+      <td>
+        <button type="button" name="PROMO" class="btn btn-outline-primary btn-sm editModal" href="#">
+          <i class="fa fa-pencil"></i>
+        </button> &nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-outline-danger btn-sm deleteRow">
+          <i class="fa fa-trash"></i>
+        </button>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+
+  <tr class="routingTh">
+    <td colspan="4">
+      <label for="TRANS_PROMO_DND"><i class="fa fa-minus-square"
+          aria-hidden="true"></i>&nbsp;&nbsp;TRANS_PROMO_DND</label>
+      <input type="checkbox" name="TRANS_PROMO_DND" id="TRANS_PROMO_DND" data-toggle="toggle">
+    </td>
+    <td><button type="button" name="TRANS_PROMO_DND" class="btn btn-info btn-sm addModal" href="#"><i
+          class="fa fa-plus"></i> Add</button> &nbsp;&nbsp;&nbsp;<button type="button" name="TRANS_PROMO_DND"
+        class="btn btn-success btn-sm saveRouting"><i class="fa fa-save"></i> Save</button></td>
+  </tr>
+  <tbody class="hide">
+    {{#each transPromoDndRoutingData }}
+    <tr class="TRANS_PROMO_DND routingRow">
+      {{#each this }}
+      <td data-id="0">{{ this }}</td>
+      {{/each}}
+      <td>
+        <button type="button" name="TRANS_PROMO_DND" class="btn btn-outline-primary btn-sm editModal" href="#">
+          <i class="fa fa-pencil"></i>
+        </button> &nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-outline-danger btn-sm deleteRow">
+          <i class="fa fa-trash"></i>
+        </button>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+
+  <tr class="routingTh">
+    <td colspan="4">
+      <label for="TRANS_PROMO_NON_DND"><i class="fa fa-minus-square"
+          aria-hidden="true"></i>&nbsp;&nbsp;TRANS_PROMO_NON_DND</label>
+      <input type="checkbox" name="TRANS_PROMO_NON_DND" id="TRANS_PROMO_NON_DND" data-toggle="toggle">
+    </td>
+    <td><button type="button" name="TRANS_PROMO_NON_DND" class="btn btn-info btn-sm addModal" href="#"><i
+          class="fa fa-plus"></i> Add</button> &nbsp;&nbsp;&nbsp;<button type="button" name="TRANS_PROMO_NON_DND"
+        class="btn btn-success btn-sm saveRouting"><i class="fa fa-save"></i> Save</button></td>
+  </tr>
+  <tbody class="hide">
+    {{#each transPromoNonDndRoutingData }}
+    <tr class="TRANS_PROMO_NON_DND routingRow">
+      {{#each this }}
+      <td data-id="0">{{ this }}</td>
+      {{/each}}
+      <td>
+        <button type="button" name="TRANS_PROMO_NON_DND" class="btn btn-outline-primary btn-sm editModal" href="#">
+          <i class="fa fa-pencil"></i>
+        </button> &nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-outline-danger btn-sm deleteRow">
+          <i class="fa fa-trash"></i>
+        </button>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+  </tbody>
+</table>

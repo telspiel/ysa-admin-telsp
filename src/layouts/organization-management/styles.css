@@ -1,0 +1,17 @@
+.autocomplete{
+    width: auto;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    height: 33px;
+}
+#view-organization,#edit-organization{
+    display: contents;
+}
+.autocomplete .dropdown{
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+}
+.select2.select2-container{
+width: 25% !important;
+}

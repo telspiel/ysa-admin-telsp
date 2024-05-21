@@ -1,0 +1,436 @@
+{{> sideNav }}
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+    <div class="pcoded-content">
+        <!-- [ Main Content ] start -->
+        <div class="p-0">
+            <div class="p-0 contant-holder">
+                <!-- contant holder start -->
+                <h3 class="main-head-3">Error Code Mapping</h3>
+                <!-- contant holder end -->
+                <div class="col-md-12 pt-2 pb-5">
+
+                    <div class="col-md-12 p-0">
+                        <main class="px-4 py-3">
+
+                            <br />
+
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs mb-4">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#add">Add</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#upload"
+                                        id="upload-campaign-tab">Upload</a>
+                                </li>
+                            </ul>
+
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="add">
+                                    <div class="col-md-10 m-auto ">
+
+
+                                        <div class="frm-border">
+                                            <div class="add-contact">
+                                                <form id="add-error-code" class="my-4">
+
+
+
+                                                    <div class="form-group row">
+                                                        <label for="add-kennalName" class="col-md-4 col-form-label">Select
+                                                            Kannel</label>
+                                                        <div class="col-md-6">
+                                                            <select id="add-kennalName" name="add-kennalName" style="width: 63%"
+                                                                class="form-control select2 dropdown add-kennalName"
+                                                                required>
+                                                                <option value="0">-- Select --</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label class="col-md-4 col-form-label">Is
+                                                            Retry Enabled</label>
+                                                        <div class="col-md-6">
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <input name="add-retry" type="radio" value="yes" id="add-retry-yes">
+                                                                    <label>Yes</label>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <input name="add-retry" type="radio" value="no" id="add-retry-no">
+                                                                    <label>No</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                    <div class="form-group row">
+                                                        <label class="col-md-4">Is
+                                                            Carrier Retry Enabled</label>
+                                                        <div class="col-md-6">
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <input name="add-cretry" type="radio" value="yes" id="add-cretry-yes">
+                                                                    <label>Yes</label>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <input name="add-cretry" type="radio" value="no" id="add-cretry-no">
+                                                                    <label>No</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+
+                                                    <div class="form-group row">
+                                                        <label for="add-platformErrorCodeId"
+                                                            class="col-md-4 col-form-label">Platform Error Code
+                                                            Id</label>
+                                                        <div class="col-md-4">
+                                                            <input type="number" class="form-control"
+                                                                id="add-platformErrorCodeId" name="add-platformErrorCodeId"
+                                                                value="" placeholder="Error Code Id" autocomplete="off"
+                                                                required pattern="[0-9]">
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class="form-group row">
+                                                        <label for="errorCode"
+                                                            class="col-md-4 col-form-label">Error Code
+                                                            </label>
+                                                        <div class="col-md-4">
+                                                            <input type="number" class="form-control"
+                                                                id="errorCode" name="errorCode"
+                                                                 placeholder="Error Code" autocomplete="off"
+                                                                required >
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class="form-group row">
+                                                        <label for="errorDesc"
+                                                            class="col-md-4 col-form-label">Error Description
+                                                            </label>
+                                                        <div class="col-md-4">
+                                                            <input type="text" class="form-control"
+                                                                id="errorDesc" name="errorDesc"
+                                                                 placeholder="Error Description"
+                                                                required >
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                    <div class="form-group row">
+                                                        <label for="add-platformErrorCode"
+                                                            class="col-md-4 col-form-label">Platform Error Code
+                                                            </label>
+                                                        <div class="col-md-4">
+                                                            <input type="number" class="form-control"
+                                                                id="add-platformErrorCode" name="add-platformErrorCode"
+                                                                value="" placeholder="Error Code" autocomplete="off"
+                                                                required>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class="form-group row">
+                                                        <label for="platformErrorDesc"
+                                                            class="col-md-4 col-form-label">Platform Error Description
+                                                            </label>
+                                                        <div class="col-md-4">
+                                                            <input type="text" class="form-control"
+                                                                id="platformErrorDesc" name="platformErrorDesc"
+                                                                 placeholder="Error Description"
+                                                                required >
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                       
+
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group mt-4 pt-2 pr-2">
+                                                                <button type="button" id="add-btnSubmit"
+                                                                    class="btn btn-primary">Add</button>
+                                                                <button type="reset"
+                                                                    class="btn btn-danger">Reset</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+
+
+
+
+
+
+                                                </form>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
+
+                                <div class="tab-pane" id="upload">
+                                    <div class="col-md-10 m-auto ">
+
+
+
+                                        <div class="frm-border">
+                                            <div class="add-contact">
+                                                <form id="upload-error-code" class="my-4">
+
+
+
+                                                    <div class="form-group row">
+                                                        <label for="upload-kennalName" class="col-md-4 col-form-label">Select
+                                                            Kannel</label>
+                                                        <div class="col-md-6">
+                                                            <select id="upload-kennalName" name="upload-kennalName" style="width: 63%"
+                                                                class="form-control select2 dropdown upload-kennalName"
+                                                                required>
+                                                                <option value="0">-- Select --</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label class="col-md-4 col-form-label">Is
+                                                            Retry Enabled</label>
+                                                        <div class="col-md-6">
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <input name="upload-retry" type="radio" value="Yes" id="retry-yes">
+                                                                    <label>Yes</label>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <input name="upload-retry" type="radio" value="No" id="retry-no">
+                                                                    <label>No</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                    <div class="form-group row">
+                                                        <label class="col-md-4">Is
+                                                            Carrier Retry Enabled</label>
+                                                        <div class="col-md-6">
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <input name="upload-cretry" type="radio" value="Yes" id="cretry-yes">
+                                                                    <label>Yes</label>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <input name="upload-cretry" type="radio" value="No" id="cretry-no">
+                                                                    <label>No</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+
+                                                    <div class="form-group row">
+                                                        <label for="upload-platformErrorCodeId"
+                                                            class="col-md-4 col-form-label">Platform Error Code
+                                                            Id</label>
+                                                        <div class="col-md-4">
+                                                            <input type="number" class="form-control"
+                                                                id="upload-platformErrorCodeId" name="upload-platformErrorCodeId"
+                                                                 placeholder="Error Code Id" autocomplete="off"
+                                                                required pattern="[0-9]">
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <div class="form-group">
+                                                                    <label for="selectFile">Select
+                                                                        File</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="custom-file">
+                                                                <input type="file" class="custom-file-input"
+                                                                    id="selectFile" name="selectFile"
+                                                                    accept=".xlsx, .xls, .csv">
+                                                                <label id="fileName" class="custom-file-label" for="customFile">Choose
+                                                                    file</label>
+                                                            </div>
+                                                            <small><b>Note:</b> Only xlsx file will be allowed </small>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group mt-4 pt-2 pr-2">
+                                                                <button type="button" id="btnSubmit"
+                                                                    class="btn btn-primary">Upload</button>
+                                                                <button type="reset"
+                                                                    class="btn btn-danger">Reset</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+
+
+
+
+
+
+                                                </form>
+                                            </div>
+                                        </div>
+
+
+
+                                        {{!--
+                                        <div class="frm-border">
+                                            <form id="controls-form" class="my-4">
+                                                <div class="row" id="error-code-mapping">
+                                                    <div class="col-md-4">
+                                                        <label for="kennalName">Select Kannel</label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <select id="kennalName" name="kennalName"
+                                                            class="form-control select2 dropdown kennalName mb-2"
+                                                            required>
+                                                            <option value="0">-- Select --</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <p>Is Retry Enabled</p>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                          <input type="radio" id="retry-yes" name="retry-yes"
+                                                            value="Yes">
+                                                          <label for="retry-yes">Yes</label>
+                                                          <input type="radio" id="retry-no" name="retry-no" value="No">
+                                                          <label for="retry-yes">No</label>
+                                                    </div>
+
+
+
+                                                    <div class="col-md-4">
+                                                        <p>Is Carrier Retry Enabled</p>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                          <input type="radio" id="cretry-yes" name="cretry-yes"
+                                                            value="Yes">
+                                                          <label for="cretry-yes">Yes</label>
+                                                          <input type="radio" id="cretry-no" name="cretry-no"
+                                                            value="No">
+                                                          <label for="cretry-yes">No</label>
+                                                    </div>
+
+
+
+                                                    <div class="col-md-4">
+                                                        <p>Platform Error Code ID</p>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                          <input type="number" id="perrorId" name="perrorId" value="0">
+                                                    </div>
+
+
+
+                                                    <div class="col-md-4">
+                                                        <label for="selectFile">Select
+                                                            File</label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="selectFile"
+                                                                name="selectFile" accept=".png,.jpg,.jpeg">
+                                                            <label class="custom-file-label" for="customFile">Choose
+                                                                file</label>
+                                                        </div>
+                                                        <small><b>Note:</b> Only xlsx file will be allowed </small>
+                                                    </div>
+
+
+                                                    <div class="col-md-4">
+                                                        <div class="form-group mt-4 pt-2 pr-2">
+                                                            <button type="button" id="btnSubmit"
+                                                                class="btn btn-primary">Upload</button>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div> --}}
+
+
+
+                                    </div>
+                                </div>
+
+
+
+
+
+                        </main>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="footer-div float-bottom">
+                <span class="copy float-left">
+                    <p id="demo"></p> &copy; All Rights Reserved
+                </span>
+                <span class="float-right">
+                    <ul class="social-media-icon">
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                    </ul>
+                </span>
+            </div>
+
+
+        </div>
+    </div>
+</div>

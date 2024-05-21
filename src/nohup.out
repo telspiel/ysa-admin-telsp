@@ -1,0 +1,316 @@
+
+> node-boilerplate@1.0.0 start /home/apps/applications/gui-server/ysa-reseller
+> NODE_ENV=production node ./src/server.js
+
+Genesis listening at http://:::8099
+
+> node-boilerplate@1.0.0 start /hana/data/applications/ysa-reseller
+> NODE_ENV=production node ./src/server.js
+
+Genesis listening at http://:::8099
+
+> node-boilerplate@1.0.0 start /hana/data/applications/ysa-admin
+> NODE_ENV=production node ./src/server.js
+
+Genesis listening at http://:::8099
+
+> node-boilerplate@1.0.0 start /hana/data/applications/ysa-admin
+> NODE_ENV=production node ./src/server.js
+
+Genesis listening at http://:::8099
+Redis is ready
+Successfully connected to the database.
+From DB 1
+From DB 1
+From DB 1
+From DB 1
+From DB 1
+From DB 1
+From DB 1
+From DB 1
+From DB 1
+From DB 1
+From DB 1
+From DB 1
+From DB 1
+From Redis 1
+From Redis 1
+From DB 1
+From Redis 1
+From DB 1
+From Redis 1
+Error: Can't add new command when connection is in closed state
+    at Connection._addCommandClosedState (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:164:17)
+    at Connection.query (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:572:17)
+    at /hana/data/applications/ysa-admin/routes/billingType.js:18:28
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  fatal: true
+}
+Error: Can't add new command when connection is in closed state
+    at Connection._addCommandClosedState (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:164:17)
+    at Connection.query (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:572:17)
+    at /hana/data/applications/ysa-admin/routes/billingType.js:18:28
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  fatal: true
+}
+Error: Can't add new command when connection is in closed state
+    at Connection._addCommandClosedState (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:164:17)
+    at Connection.query (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:572:17)
+    at /hana/data/applications/ysa-admin/routes/billingType.js:18:28
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  fatal: true
+}
+Error: Can't add new command when connection is in closed state
+    at Connection._addCommandClosedState (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:164:17)
+    at Connection.query (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:572:17)
+    at /hana/data/applications/ysa-admin/routes/billingType.js:18:28
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  fatal: true
+}
+Error: Can't add new command when connection is in closed state
+    at Connection._addCommandClosedState (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:164:17)
+    at Connection.query (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:572:17)
+    at /hana/data/applications/ysa-admin/routes/billingType.js:18:28
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  fatal: true
+}
+Error: Can't add new command when connection is in closed state
+    at Connection._addCommandClosedState (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:164:17)
+    at Connection.query (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:572:17)
+    at /hana/data/applications/ysa-admin/routes/billingType.js:18:28
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  fatal: true
+}
+Error: Can't add new command when connection is in closed state
+    at Connection._addCommandClosedState (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:164:17)
+    at Connection.query (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:572:17)
+    at /hana/data/applications/ysa-admin/routes/billingType.js:18:28
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  fatal: true
+}
+Error: Can't add new command when connection is in closed state
+    at Connection._addCommandClosedState (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:164:17)
+    at Connection.query (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:572:17)
+    at /hana/data/applications/ysa-admin/routes/billingType.js:18:28
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  fatal: true
+}
+Error: Can't add new command when connection is in closed state
+    at Connection._addCommandClosedState (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:164:17)
+    at Connection.query (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:572:17)
+    at /hana/data/applications/ysa-admin/routes/billingType.js:18:28
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  fatal: true
+}
+Error: Can't add new command when connection is in closed state
+    at Connection._addCommandClosedState (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:164:17)
+    at Connection.query (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:572:17)
+    at /hana/data/applications/ysa-admin/routes/billingType.js:18:28
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  fatal: true
+}
+Error: Can't add new command when connection is in closed state
+    at Connection._addCommandClosedState (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:164:17)
+    at Connection.query (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:572:17)
+    at /hana/data/applications/ysa-admin/routes/billingType.js:18:28
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  fatal: true
+}
+Error: Can't add new command when connection is in closed state
+    at Connection._addCommandClosedState (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:164:17)
+    at Connection.query (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:572:17)
+    at /hana/data/applications/ysa-admin/routes/billingType.js:18:28
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  fatal: true
+}
+Error: Can't add new command when connection is in closed state
+    at Connection._addCommandClosedState (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:164:17)
+    at Connection.query (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:572:17)
+    at /hana/data/applications/ysa-admin/routes/billingType.js:18:28
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  fatal: true
+}
+Error: Can't add new command when connection is in closed state
+    at Connection._addCommandClosedState (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:164:17)
+    at Connection.query (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:572:17)
+    at /hana/data/applications/ysa-admin/routes/billingType.js:18:28
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  fatal: true
+}
+Error: Can't add new command when connection is in closed state
+    at Connection._addCommandClosedState (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:164:17)
+    at Connection.query (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:572:17)
+    at /hana/data/applications/ysa-admin/routes/billingType.js:18:28
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  fatal: true
+}
+Error: Can't add new command when connection is in closed state
+    at Connection._addCommandClosedState (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:164:17)
+    at Connection.query (/hana/data/applications/ysa-admin/node_modules/mysql2/lib/connection.js:572:17)
+    at /hana/data/applications/ysa-admin/routes/billingType.js:18:28
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  fatal: true
+}
+
+> node-boilerplate@1.0.0 start /hana/data/applications/ysa-admin
+> NODE_ENV=production node ./src/server.js
+
+Genesis listening at http://:::8099
+Redis is ready
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+From Redis 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+From Redis 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+TypeError: Cannot read property 'billing_type' of undefined
+    at /hana/data/applications/ysa-admin/routes/billingType.js:18:42
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+From Redis 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+From Redis 1
+From Redis 1
+From Redis 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+From Redis 1
+From Redis 1
+From Redis 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+From Redis 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+From Redis 1
+Connection acquired from the pool
+Connection released back to the pool
+From DB 1
+From Redis 1

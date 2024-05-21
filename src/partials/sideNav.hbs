@@ -1,0 +1,147 @@
+<!-- [ navigation menu ] start -->
+<nav class="pcoded-navbar menupos-fixed menu-light">
+  <div class="navbar-wrapper">
+    <div class="navbar-content scroll-div">
+      <ul class="nav pcoded-inner-navbar">
+        <li class="nav-item" id="DashboardMenu">
+          <a href="/dashboard" class="nav-link"><span class="pcoded-micon"><i
+                class="fa fa-building mr-1"
+              ></i></span><span class="pcoded-mtext">
+              Dashboard
+            </span></a>
+        </li>
+
+        {{! <li class="nav-item">
+          <a href="/user-management/add" class="nav-link "><span class="pcoded-micon"><i
+                class="fa fa-users mr-1"></i></span><span class="pcoded-mtext">
+              User Management
+            </span></a>
+        </li> }}
+        <li class="nav-item" id="OrgMgmtMenu">
+          <a href="/organization-management/add" class="nav-link"><span
+              class="pcoded-micon"
+            ><i class="fa fa-object-group mr-1"></i></span><span
+              class="pcoded-mtext"
+            >
+              Organization Management
+            </span></a>
+        </li>
+        <li class="nav-item" id="DepMgmtMenu">
+          <a href="/department-management/add" class="nav-link"><span
+              class="pcoded-micon"
+            ><i class="fa fa-building-o mr-1"></i></span><span
+              class="pcoded-mtext"
+            >
+              Department Management
+            </span></a>
+        </li>
+
+        <li class="nav-item pcoded-hasmenu" id="userMgmtMenu">
+          <a href="#!" class="nav-link"><span class="pcoded-micon"><i
+                class="fa fa-users"
+              ></i></span><span class="pcoded-mtext">User Management</span></a>
+          <ul class="pcoded-submenu">
+            <li><a href="/external-user/add">External user</a></li>
+            <li id="ListUserMenu"><a href="/list-user">List External User</a></li>
+            <li id="ListInternalUserMenu"><a href="/internal-user/add">Internal
+                User</a></li>
+            <li id="GenerateMenu"><a href="/generate-api">Generate API Key</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item" id="SenIDMenu">
+          <a href="/senderId-management/add" class="nav-link"><span
+              class="pcoded-micon"
+            ><i class="fa fa-paper-plane mr-1"></i></span><span
+              class="pcoded-mtext"
+            >
+              Sender Id Management
+            </span></a>
+        </li>
+
+        <li class="nav-item" id="CreditsMenu">
+          <a href="/credits-management/add" class="nav-link"><span
+              class="pcoded-micon"
+            ><i class="fa fa-dollar mr-1"></i></span><span class="pcoded-mtext">
+              Credits Management
+            </span></a>
+        </li>
+
+        <li class="nav-item pcoded-hasmenu" id="reportMenu">
+          <a href="#!" class="nav-link"><span class="pcoded-micon"><i
+                class="fa fa-map-signs"
+              ></i></span><span class="pcoded-mtext">Reports</span></a>
+          <ul class="pcoded-submenu">
+            <li><a href="/mis">Detailed MIS</a></li>
+            <li><a href="/summary-report">Summary Report</a></li>
+            <li><a href="/senderId-report">Sender ID Report</a></li>
+            <li><a href="/user-summary-report">User Summary Report</a></li>
+            <li><a href="/custom-summary-report">Custom Summary Report</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item" id="DownloadMenu">
+          <a href="/downloadReport" class="nav-link"><span
+              class="pcoded-micon"
+            ><i class="fa fa-arrow-circle-o-down"></i></span><span
+              class="pcoded-mtext"
+            >Download Report</span></a>
+        </li>
+        <li class="nav-item pcoded-hasmenu" id="routingMenu">
+          <a href="#!" class="nav-link"><span class="pcoded-micon"><i
+                class="fa fa-map-signs"
+              ></i></span><span class="pcoded-mtext">Routing Management</span></a>
+          <ul class="pcoded-submenu">
+            <li><a href="/connect-management">Manage Connect</a></li>
+            <li><a href="/routing">Assign Gateway</a></li>
+            <li><a href="/bulk-routing">Switch Gateway</a></li>
+            <li><a href="/error-code-mapping">Error Code Mapping</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item d-none" id="smppMgmt">
+          <a href="/ssmp-session-mgmt" class="nav-link"><span
+              class="pcoded-micon"
+            ><i class="fa fa-external-link-square"></i></span><span
+              class="pcoded-mtext"
+            >
+              SMPP Session Management
+            </span></a>
+        </li>
+
+        <!--        <li class="nav-item" id="smppMgmt">
+          <a href="/smsc-mgmt/add" class="nav-link "><span class="pcoded-micon"><i
+                class="fa fa-book mr-1"></i></span><span class="pcoded-mtext">
+              SMSC Management
+            </span></a>
+        </li> -->
+
+        <li class="nav-item d-none" id="operatorSummary">
+          <a href="/operator-summary" class="nav-link"><span
+              class="pcoded-micon"
+            ><i class="fa fa-book mr-1"></i></span><span class="pcoded-mtext">
+              Operator Summary
+            </span></a>
+        </li>
+
+        {{! Hiding Logo Option in the Sidebar }}
+
+        <li class="nav-item" id="LogoMenu">
+          <a href="/logo-upload" class="nav-link"><span class="pcoded-micon"><i
+                class="fa fa-upload mr-1"
+              ></i></span><span class="pcoded-mtext">
+              Logo Upload
+            </span></a>
+        </li>
+
+        <li class="nav-item d-none" id="ErrorMenu">
+          <a href="/error-code" class="nav-link"><span class="pcoded-micon"><i
+                class="fa fa-warning"
+              ></i></span><span class="pcoded-mtext">Error Code</span></a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+<!-- [ navigation menu ] end -->

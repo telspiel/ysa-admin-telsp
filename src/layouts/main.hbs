@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {{> styles this}}
+  <title>{{ title }}</title>
+</head>
+{{!-- 
+{{> sideNav this }} --}}
+
+
+{{!-- <body style="background: url(/images/banner.jpg);
+    background-position: 50% 0px;width: 100%;background-size: 110%;"> --}}
+    <body>
+  {{> topNav }}
+  {{{ body }}}
+  {{> scripts this }}
+</body>
+
+</html>

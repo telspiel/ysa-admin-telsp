@@ -1,0 +1,15 @@
+
+
+.table-pagination li a {
+  color: var(--primary-color);
+}
+
+#pagePrev, #pageNext {
+  display: none;
+}
+/* #misTable_length,#misTable_filter,#misTable_info,#misTable_paginate{
+display:none;
+} */
+#report_donwload{
+  color:white;
+}

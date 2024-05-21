@@ -1,0 +1,79 @@
+{{> sideNav }}
+
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+  <div class="pcoded-content">
+    <!-- [ Main Content ] start -->
+    <div class="p-0">
+      <div class="p-0 contant-holder">
+        <!-- contant holder start -->
+        <h3 class="main-head-3">Download Report</h3>
+        <!-- contant holder end -->
+        <div class="col-md-12 pt-2 pb-5">
+
+          <form id="controls-form">
+
+            <div class="frm-border">
+              <div class="row ">
+                <div class="col-md-3 adminName">
+                  <label for="adminName">Admin name</label>
+                  <select type="text" class="form-control select2 dropdown adminName" id="adminName" name="adminName">
+                    <option value="">-- Select --</option>
+                  </select>
+                </div>
+
+                <div class="col-md-3 resellerName">
+                  <label for="resellerName">Reseller name</label>
+                  <select type="text" class="form-control select2 dropdown resellerName" id="resellerName" name="resellerName">
+                    <option value="">-- Select --</option>
+                  </select>
+                </div>
+
+                <div class="col-md-3 sellerName">
+                  <label for="sellerName">Seller name</label>
+                  <select type="text" class="form-control select2 dropdown sellerName" id="sellerName" name="sellerName">
+                    <option value="">-- Select --</option>
+                  </select>
+                </div>
+
+                <div class="col-md-3 clientName">
+                  <label for="clientName">Client name</label>
+                  <select type="text" class="form-control select2 dropdown clientName" id="clientName" name="clientName">
+                    <option value="">-- Select --</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row pt-2">
+                <div class="col-md-2">
+                  <div class="form-group">
+                    <label for="txt-from">From</label>
+                    <input type="text" class="form-control" id="fromDate" required>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <div class="form-group">
+                    <label for="txt-from">To</label>
+                    <input type="text" class="form-control" id="toDate" required>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <div class="form-group mt-4 pt-1">
+                    <input type="hidden" id="pageNumber" value="1" />
+                    <input type="hidden" id="totalPages" value="1" />
+                    <button type="submit" class="btn btn-primary">Generate Download Link</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <table id="misTable" class="table table-striped table-sm table-bordered dt-responsive nowrap" style="width:100%">
+            <ul id="misPagination" class="pagination float-right table-pagination">
+              <li class="page-item"><a class="page-link" id="pagePrev" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" id="pageNext" href="#">Next</a></li>
+            </ul>
+            {{> mainLoader }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

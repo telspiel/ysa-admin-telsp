@@ -1,0 +1,10 @@
+.credits-form {
+  padding: 30px 10px;
+  width: 50%;
+}
+#misTable_filter{
+  display:none;
+}
+.select2-container{
+width: 100% !important;
+}

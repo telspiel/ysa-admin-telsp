@@ -1,0 +1,26 @@
+{{! <div class="loginInfo"> }}
+<span>
+  <b><i class="fa fa-calendar-check-o mr-1"></i>
+    Last Login :
+  </b>{{lastLogin}}</span>
+<span>
+  <b><i class="fa fa-desktop mr-1"></i>
+    Last Login IP :
+  </b>{{lastLoginIp}}</span>
+{{! </div> }}
+<!-- dropdown class remove from div -->
+<a href="/user-profile">
+  <!-- class="dropdown-toggle" data-toggle="dropdown" remove from div -->
+  <img
+    src="/images/avatar-1.jpg"
+    class="img-radius wid-40"
+    alt="User-Profile-Image"
+  />
+</a>
+<span>
+  <a href="/dashboard">{{name}}&nbsp;</a>
+  <a href="/login" class="dud-logout" title="Logout">
+    <i class="feather icon-log-out"></i>
+    Logout
+  </a>
+</span>

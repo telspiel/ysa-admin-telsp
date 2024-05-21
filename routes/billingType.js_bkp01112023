@@ -1,0 +1,61 @@
+const express = require("express");
+const router = express.Router();
+const connection = require('./../db.js');
+const redisClient = require('./../rdb.js');
+
+
+
+router.post("/billing", async (req, res) => {
+
+    try{
+        let userId = req.body.userId;
+        if (userId!=1 && userId!=8 && userId!=847) {
+            const key = `user:${userId}:billing_type`;
+            let billingType = await redisClient.get(key);
+            if (!billingType) {
+                const sql = `SELECT billing_type FROM ng_user WHERE id=${userId}`
+                //
+                connection.query(sql, async (error, results, fields) => {
+                if (error) {
+                    console.error(error);
+                    res.status(500).send("Internal Server Error");
+                } else {
+                    billingType = results[0].billing_type;
+                    console.log("From DB",billingType);       
+                    await redisClient.set(key, billingType,{EX:300});  // Set data in Redis with expiry of 5 minutes (300 seconds)
+                    // Send response to client
+                    res.json({ billingType });
+                }
+                });
+            } else {
+                // If data is present in Redis, use cached data
+                console.log("From Redis",billingType);
+                // Send response to client
+                res.json({ billingType });
+            }
+        }
+        else{
+            res.json({ billingType: 3 });
+        }
+    }catch (error) {
+        console.error(error);
+        res.status(500).send("Internal Server Error");
+    }
+
+
+
+    
+    
+
+    
+
+
+
+
+
+    
+
+
+});
+
+module.exports = router;

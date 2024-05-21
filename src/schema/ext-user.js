@@ -1,0 +1,967 @@
+import Validator from "./../scripts/validator";
+
+const Schema = {
+  id: "add-user",
+  action: "#",
+  method: "post",
+  fields: [
+    {
+      label: "User Type",
+      type: "text",
+      id: "customerType",
+      name: "customerType",
+      title: "Enter User type.",
+      placeholder: "User Type",
+      required: true,
+      readonly: true,
+    },
+    {
+      label: "User Name",
+      type: "text",
+      id: "userName",
+      name: "userName",
+      title: "Enter User name.",
+      placeholder: "User Name",
+      required: true,
+      readonly: true,
+    },
+    {
+      label: "Password",
+      type: "text",
+      id: "userPass",
+      name: "userPassword",
+      title: "Enter User Password.",
+      placeholder: "Enter User Password",
+      required: true,
+    },
+    {
+      label: "Organisation",
+      type: "text",
+      id: "orgName",
+      name: "orgName",
+      title: "Organisation",
+      required: true,
+      readonly: true,
+    },
+    {
+      label: "Department",
+      type: "text",
+      id: "deptName",
+      name: "deptName",
+      title: "Department",
+      required: true,
+      readonly: true,
+    },
+    {
+      label: "Account manager",
+      type: "select",
+      id: "accountManagerNameedit",
+      name: "accountManagerName",
+      title: "Account manager",
+      class: "accountManagerName dropdown select2",
+      selected: "selected",
+      required: true,
+      options: [],
+    },
+    {
+      label: "Email",
+      type: "email",
+      id: "email",
+      name: "email",
+      pattern: Validator.email,
+      title: "Please enter valid email.",
+      placeholder: "User Email",
+      required: true,
+    },
+    {
+      label: "Mobile Number",
+      type: "tel",
+      id: "mobile",
+      name: "mobile",
+      pattern: Validator.phone,
+      title: "Please enter valid mobile number.",
+      placeholder: "User Mobile Number",
+      required: true,
+    },
+    // {
+    //   label: "Account Type",
+    //   type: "select",
+    //   id: "editAccountType",
+    //   name: "accountType",
+    //   title: "Account Type",
+    //   required: true,
+    //   readonly: true,
+    //   disabled: true,
+    //   options: [
+    //     {
+    //       label: "Transactional",
+    //       value: "trans"
+    //     },
+    //     {
+    //       label: "Promotional",
+    //       value: "promo"
+    //     },
+    //     {
+    //       label: "TransPromo",
+    //       value: "transpromo"
+    //     }
+    //   ]
+    // },
+    {
+      label: "Billing Type",
+      type: "select",
+      id: "billingType",
+      name: "billingType",
+      title: "Billing Type",
+      selected: "selected",
+      options: [
+        {
+          label: "POSTPAID",
+          value: "postpaid",
+        },
+        {
+          label: "PREPAID",
+          value: "prepaid",
+        },
+      ],
+    },
+    {
+      label: "Billing Cycle",
+      type: "select",
+      id: "billingCycle",
+      name: "billingCycle",
+      title: "Billing Cycle",
+      selected: "selected",
+      options: [
+        {
+          label: "MONTHLY",
+          value: "monthly",
+        },
+        {
+          label: "QUARTERLY",
+          value: "quarterly",
+        },
+      ],
+    },
+    {
+      label: "Sender ID Type",
+      type: "select",
+      id: "senderIdType",
+      name: "senderIdType",
+      title: "Sender ID Type",
+      selected: "selected",
+      options: [
+        {
+          label: "Dynamic",
+          value: "dynamic",
+        },
+        {
+          label: "Static",
+          value: "static",
+        },
+      ],
+    },
+    {
+      label: "Priority",
+      type: "select",
+      id: "priority",
+      name: "priority",
+      title: "Priority",
+      selected: "selected",
+      options: [
+        {
+          label: "High",
+          value: "high",
+        },
+        {
+          label: "Medium",
+          value: "medium",
+        },
+        {
+          label: "Low",
+          value: "low",
+        },
+      ],
+    },
+    {
+      label: "Is Visualize Allowed",
+      type: "select",
+      id: "isVisualizeAllowed",
+      name: "isVisualizeAllowed",
+      title: "Is Visualize Allowed",
+      options: [
+        {
+          label: "Yes",
+          value: "Y",
+        },
+        {
+          label: "No",
+          value: "N",
+        },
+      ],
+    },
+    // {
+    //   label: "DLR Push URL",
+    //   type: "text",
+    //   id: "dlrPushUrl",
+    //   name: "dlrPushUrl",
+    //   title: "DLR",
+    //   placeholder: "DLR Push URL"
+    // },
+    {
+      label: "User Account Type",
+      type: "select",
+      id: "userAccountType",
+      name: "userAccountType",
+      title: "User Account Type",
+      selected: "selected",
+      // readonly: false,
+      options: [
+        {
+          label: "SMPP",
+          value: "SMPP",
+        },
+        {
+          label: "WEB",
+          value: "WEB",
+        },
+        {
+          label: "API",
+          value: "API",
+        },
+      ],
+    },
+    {
+      label: "SMPP Charset",
+      type: "select",
+      id: "smppCharset",
+      name: "smppCharset",
+      title: "SMPP Charset",
+      selected: "selected",
+      // readonly: false,
+      options: [
+        {
+          label: "ASCII",
+          value: "ASCII",
+        },
+        {
+          label: "GSM",
+          value: "GSM",
+        },
+      ],
+    },
+    {
+      label: "Tx",
+      type: "select",
+      id: "txSession",
+      name: "txSession",
+      title: "Tx",
+      disabled: true,
+      options: [
+        {
+          label: "0",
+          value: "0",
+        },
+        {
+          label: "1",
+          value: "1",
+        },
+        {
+          label: "2",
+          value: "2",
+        },
+        {
+          label: "3",
+          value: "3",
+        },
+        {
+          label: "4",
+          value: "4",
+        },
+        {
+          label: "5",
+          value: "5",
+        },
+        {
+          label: "6",
+          value: "6",
+        },
+        {
+          label: "7",
+          value: "7",
+        },
+        {
+          label: "8",
+          value: "8",
+        },
+        {
+          label: "9",
+          value: "9",
+        },
+        {
+          label: "10",
+          value: "10",
+        },
+        {
+          label: "11",
+          value: "11",
+        },
+        {
+          label: "12",
+          value: "12",
+        },
+        {
+          label: "13",
+          value: "13",
+        },
+        {
+          label: "14",
+          value: "14",
+        },
+        {
+          label: "15",
+          value: "15",
+        },
+        {
+          label: "16",
+          value: "16",
+        },
+        {
+          label: "17",
+          value: "17",
+        },
+        {
+          label: "18",
+          value: "18",
+        },
+        {
+          label: "19",
+          value: "19",
+        },
+        {
+          label: "20",
+          value: "20",
+        },
+      ],
+    },
+    {
+      label: "Rx",
+      type: "select",
+      id: "rxSession",
+      name: "rxSession",
+      title: "Rx",
+      disabled: true,
+      options: [
+        {
+          label: "0",
+          value: "0",
+        },
+        {
+          label: "1",
+          value: "1",
+        },
+        {
+          label: "2",
+          value: "2",
+        },
+        {
+          label: "3",
+          value: "3",
+        },
+        {
+          label: "4",
+          value: "4",
+        },
+        {
+          label: "5",
+          value: "5",
+        },
+        {
+          label: "6",
+          value: "6",
+        },
+        {
+          label: "7",
+          value: "7",
+        },
+        {
+          label: "8",
+          value: "8",
+        },
+        {
+          label: "9",
+          value: "9",
+        },
+        {
+          label: "10",
+          value: "10",
+        },
+        {
+          label: "11",
+          value: "11",
+        },
+        {
+          label: "12",
+          value: "12",
+        },
+        {
+          label: "13",
+          value: "13",
+        },
+        {
+          label: "14",
+          value: "14",
+        },
+        {
+          label: "15",
+          value: "15",
+        },
+        {
+          label: "16",
+          value: "16",
+        },
+        {
+          label: "17",
+          value: "17",
+        },
+        {
+          label: "18",
+          value: "18",
+        },
+        {
+          label: "19",
+          value: "19",
+        },
+        {
+          label: "20",
+          value: "20",
+        },
+      ],
+    },
+    {
+      label: "TRx",
+      type: "select",
+      id: "trxSession",
+      name: "trxSession",
+      title: "TRx",
+      disabled: true,
+      options: [
+        {
+          label: "0",
+          value: "0",
+        },
+        {
+          label: "1",
+          value: "1",
+        },
+        {
+          label: "2",
+          value: "2",
+        },
+        {
+          label: "3",
+          value: "3",
+        },
+        {
+          label: "4",
+          value: "4",
+        },
+        {
+          label: "5",
+          value: "5",
+        },
+        {
+          label: "6",
+          value: "6",
+        },
+        {
+          label: "7",
+          value: "7",
+        },
+        {
+          label: "8",
+          value: "8",
+        },
+        {
+          label: "9",
+          value: "9",
+        },
+        {
+          label: "10",
+          value: "10",
+        },
+        {
+          label: "11",
+          value: "11",
+        },
+        {
+          label: "12",
+          value: "12",
+        },
+        {
+          label: "13",
+          value: "13",
+        },
+        {
+          label: "14",
+          value: "14",
+        },
+        {
+          label: "15",
+          value: "15",
+        },
+        {
+          label: "16",
+          value: "16",
+        },
+        {
+          label: "17",
+          value: "17",
+        },
+        {
+          label: "18",
+          value: "18",
+        },
+        {
+          label: "19",
+          value: "19",
+        },
+        {
+          label: "20",
+          value: "20",
+        },
+      ],
+    },
+    {
+      label: "Status",
+      type: "select",
+      id: "status",
+      name: "status",
+      title: "Department Status",
+      options: [
+        {
+          label: "Active",
+          value: "active",
+        },
+        {
+          label: "Inactive",
+          value: "inactive",
+        },
+      ],
+    },
+    {
+      label: "Expiry",
+      type: "text",
+      id: "userExpiryDate",
+      name: "userExpiryDate",
+      title: "Expiry",
+      class: "form-control datetimepicker",
+      placeholder: "Expiry Date",
+      required: true,
+      readonly: true,
+    },
+    // {
+    //   label: "Reject Failed Number",
+    //   type: "select",
+    //   id: "rejectFailedNumber",
+    //   name: "rejectFailedNumber",
+    //   title: "Reject Failed Number",
+    //   options: [
+    //     {
+    //       label: "Yes",
+    //       value: "Yes"
+    //     },
+    //     {
+    //       label: "No",
+    //       value: "No"
+    //     }
+    //   ]
+    // },
+    {
+      label: "DND Check",
+      type: "radio",
+      id: "isDndCheck",
+      name: "isDndCheck",
+      title: "DND Check",
+      required: true,
+      options: [
+        {
+          label: "Yes",
+          value: "Yes",
+        },
+        {
+          label: "No",
+          value: "No",
+        },
+      ],
+    },
+    {
+      label: "Credit history",
+      type: "radio",
+      id: "isCreditHistoryAllowed",
+      name: "isCreditHistoryAllowed",
+      title: "Credit history",
+      required: true,
+      options: [
+        {
+          label: "Yes",
+          value: "Yes",
+        },
+        {
+          label: "No",
+          value: "No",
+        },
+      ],
+    },
+    // {
+    //   label: "Credit Refund",
+    //   type: "radio",
+    //   id: "isCreditRefund",
+    //   name: "isCreditRefund",
+    //   title: "Credit Refund",
+    //   required: true,
+    //   options: [
+    //     {
+    //       label: "Yes",
+    //       value: "Yes"
+    //     },
+    //     {
+    //       label: "No",
+    //       value: "No"
+    //     }
+    //   ]
+    // },
+    // {
+    //   label: "Automatic Failure Refund",
+    //   type: "radio",
+    //   id: "autoFailureRefund",
+    //   name: "autoFailureRefund",
+    //   title: "Automatic Failure Refund",
+    //   required: true,
+    //   options: [
+    //     {
+    //       label: "Yes",
+    //       value: "Yes"
+    //     },
+    //     {
+    //       label: "No",
+    //       value: "No"
+    //     }
+    //   ]
+    // },
+    {
+      label: "Mobile Number Masking",
+      type: "radio",
+      id: "isNumberMasking",
+      name: "isNumberMasking",
+      title: "Mobile Number Masking",
+      required: true,
+      options: [
+        {
+          label: "Yes",
+          value: "Yes",
+        },
+        {
+          label: "No",
+          value: "No",
+        },
+      ],
+    },
+    {
+      label: "Masking Count",
+      type: "select",
+      id: "numberMaskingCount",
+      name: "numberMaskingCount",
+      title: "Masking Count",
+      disabled: true,
+      options: [
+        {
+          label: "0",
+          value: "0",
+        },
+        {
+          label: "1",
+          value: "1",
+        },
+        {
+          label: "2",
+          value: "2",
+        },
+        {
+          label: "3",
+          value: "3",
+        },
+        {
+          label: "4",
+          value: "4",
+        },
+        {
+          label: "5",
+          value: "5",
+        },
+      ],
+    },
+    // {
+    //   label: "Content Filter",
+    //   type: "radio",
+    //   id: "isContentFilterAllowed",
+    //   name: "isContentFilterAllowed",
+    //   title: "Content Filter",
+    //   required: true,
+    //   options: [
+    //     {
+    //       label: "Yes",
+    //       value: "Yes"
+    //     },
+    //     {
+    //       label: "No",
+    //       value: "No"
+    //     }
+    //   ]
+    // },
+    // {
+    //   label: "Abusive Words Count",
+    //   type: "select",
+    //   id: "abusingWordsLimit",
+    //   name: "abusingWordsLimit",
+    //   title: "Abusive Words Count",
+    //   disabled: true,
+    //   options: [
+    //     {
+    //       label: "0",
+    //       value: "0",
+    //     },
+    //     {
+    //       label: "1",
+    //       value: "1",
+    //     },
+    //     {
+    //       label: "2",
+    //       value: "2",
+    //     },
+    //     {
+    //       label: "3",
+    //       value: "3",
+    //     },
+    //     {
+    //       label: "4",
+    //       value: "4",
+    //     },
+    //     {
+    //       label: "5",
+    //       value: "5",
+    //     },
+    //     {
+    //       label: "6",
+    //       value: "6",
+    //     },
+    //     {
+    //       label: "7",
+    //       value: "7",
+    //     },
+    //     {
+    //       label: "8",
+    //       value: "8",
+    //     },
+    //     {
+    //       label: "9",
+    //       value: "9",
+    //     },
+    //     {
+    //       label: "10",
+    //       value: "10",
+    //     }
+    //   ]
+    // },
+    // {
+    //   label: "DLR Retry",
+    //   type: "radio",
+    //   id: "isDlrRetryAllowed",
+    //   name: "isDlrRetryAllowed",
+    //   title: "DLR Retry",
+    //   required: true,
+    //   options: [
+    //     {
+    //       label: "Yes",
+    //       value: "Yes"
+    //     },
+    //     {
+    //       label: "No",
+    //       value: "No"
+    //     }
+    //   ]
+    // },
+    // {
+    //   label: "Max DLR Retry Count",
+    //   type: "select",
+    //   id: "dlrRetryCount",
+    //   name: "dlrRetryCount",
+    //   title: "Max DLR Retry Count",
+    //   options: [
+    //     {
+    //       label: "0",
+    //       value: "0",
+    //     },
+    //     {
+    //       label: "1",
+    //       value: "1",
+    //     },
+    //     {
+    //       label: "2",
+    //       value: "2",
+    //     },
+    //     {
+    //       label: "3",
+    //       value: "3",
+    //     },
+    //     {
+    //       label: "4",
+    //       value: "4",
+    //     },
+    //     {
+    //       label: "5",
+    //       value: "5",
+    //     }
+    //   ]
+    // },
+
+    //Arnav changes: uncomment low-credit-notification and Notify if credit value reaches input field in 23-02-2024
+    {
+      label: "Low credit notification",
+      type: "radio",
+      id: "isLowCreditAlert",
+      name: "isLowCreditAlert",
+      title: "Low credit notification",
+      required: true,
+      options: [
+        {
+          id: "isLowCreditAlert-0",
+          label: "Yes",
+          value: "Yes",
+        },
+        {
+          id: "isLowCreditAlert-1",
+          label: "No",
+          value: "No",
+        },
+      ],
+    },
+
+    {
+      label: "Notify if credit value reaches",
+      type: "text",
+      id: "lowCreditAlertLimit",
+      name: "lowCreditAlertLimit",
+      title: "Notify if credit value reaches",
+      disabled: true,
+    },
+    {
+      label: "Credit Alert Mode",
+      type: "select",
+      id: "creditAlertMode",
+      name: "creditAlertMode",
+      title: "Credit Alert Mode",
+      selected: "selected",
+      // readonly: false,
+      options: [
+        {
+          label: "SMS",
+          value: "sms",
+        },
+        {
+          label: "Email",
+          value: "email",
+        },
+        {
+          label: "Both",
+          value: "both",
+        },
+      ],
+    },
+  ],
+  buttons: [
+    {
+      type: "button",
+      value: "Save",
+      class: "btn-info",
+    },
+    {
+      type: "button",
+      value: "Cancel",
+      id: "cancelForm",
+      class: "btn-danger",
+    },
+  ],
+};
+
+Schema.view = {
+  id: "view-user",
+  action: "#",
+  method: "post",
+  fields: [
+    {
+      label: "Organization",
+      type: "text",
+      id: "orgNameView",
+      name: "orgNameView",
+      title: "Enter Organization name.",
+      placeholder: "Organization Name",
+      required: true,
+    },
+    {
+      label: "Department",
+      type: "text",
+      id: "deptNameView",
+      name: "deptNameView",
+      title: "Enter Department name.",
+      placeholder: "Department Name",
+      required: true,
+    },
+    {
+      label: "User Name",
+      type: "text",
+      id: "userNameView",
+      name: "nameView",
+      title: "Enter User name.",
+      placeholder: "User Name",
+      required: true,
+    },
+  ],
+};
+
+Schema.edit = {
+  id: "edit-user",
+  action: "#",
+  method: "post",
+  fields: [
+    {
+      label: "Organization",
+      type: "text",
+      id: "orgNameEdit",
+      name: "orgNameEdit",
+      title: "Enter Organization name.",
+      placeholder: "Organization Name",
+      required: true,
+    },
+    {
+      label: "Department",
+      type: "text",
+      id: "deptNameEdit",
+      name: "deptNameEdit",
+      title: "Enter Department name.",
+      placeholder: "Department Name",
+      required: true,
+    },
+    {
+      label: "User Name",
+      type: "text",
+      id: "userNameEdit",
+      name: "nameEdit",
+      title: "Enter User name.",
+      placeholder: "User Name",
+      required: true,
+    },
+  ],
+};
+
+export default Schema;

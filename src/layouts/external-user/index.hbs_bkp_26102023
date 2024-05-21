@@ -1,0 +1,606 @@
+{{> sideNav this }}
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+  <div class="pcoded-content">
+    <!-- [ Main Content ] start -->
+    <div class="p-0">
+      <div class="p-0 contant-holder">
+        <!-- contant holder start -->
+        <h3 class="main-head-3">User Management <small>( External User )</small></h3>
+        <!-- contant holder end -->
+        <div class="col-md-12 pt-2 pb-5">
+          <main class="px-4 py-3">
+
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="add-user-tab" data-toggle="tab" href="#add" role="tab"
+                  aria-controls="add" aria-selected="true">Add</a>
+                <a class="nav-item nav-link" id="view-user-tab" data-toggle="tab" href="#view" role="tab"
+                  aria-controls="view" aria-selected="false">View</a>
+                <a class="nav-item nav-link" id="edit-user-tab" data-toggle="tab" href="#edit" role="tab"
+                  aria-controls="edit" aria-selected="false">Edit</a>
+              </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="add" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div id="add-user-form" class="user-form">
+                  <form id="add-user" action="#">
+                    <div>
+                      <h3>User Account</h3>
+                      <section>
+                        <div class="row">
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="customerType" class="col-form-label">User Type</label>
+                            <select class="custom-select" id="customerType" name="customerType" title="Customer Type">
+{{!--
+                              <option value="reseller">Reseller</option>
+                              <option value="seller">Seller</option>
+                              <option value="client">Client</option>
+--}}
+                            </select>
+                          </div>
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="userName" class="col-form-label">Username</label>
+                            <input type="text" class="form-control" id="userName" name="userName" value=""
+                              placeholder="User Name" required>
+                          </div>
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="userPassword" class="col-form-label">Password</label>
+                            <input type="password" class="form-control" id="userPassword" name="userPassword" value=""
+                              placeholder="Password">
+                          </div>
+
+                          <!-- <div class="form-group col-md-3 col-sm-6">
+                            <label for="accountType" class="col-form-label">Account Type</label>
+                            <select class="custom-select" id="accountType" name="accountType" title="Account Type">
+                              <option value="trans">Transactional</option>
+                              <option value="promo">Promotional</option>
+                              <option value="transpromo">TransPromo</option>
+                            </select>
+                          </div> -->
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="billingType" class="col-form-label">Billing Type</label>
+                            <select class="custom-select" id="billingType" name="billingType" title="Billing Type">
+                              <option value="prepaid">PREPAID</option>
+                              <option value="postpaid">POSTPAID</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="billingCycle" class="col-form-label">Billing Cycle</label>
+                            <select class="custom-select" id="billingCycle" name="billingCycle" title="Billing Cycle">
+                              <option value="monthly">Monthly</option>
+                              <option value="quarterly">Quaterly</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="senderIdType" class="col-form-label">Sender Id Type</label>
+                            <select class="custom-select" id="senderIdType" name="senderIdType" title="Sender Id Type">
+                              <option value="dynamic">Dynamic</option>
+                              <option value="static">Static</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="priority" class=" col-form-label">Priority</label>
+                            <select class="custom-select" id="priority" name="priority" title="Priority">
+                              <option value="high">High</option>
+                              <option value="medium">Medium</option>
+                              <option value="low">Low</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="isVisualizeAllowed" class="col-form-label">Is Visualize Allowed</label>
+                            <select class="custom-select" id="isVisualizeAllowed" name="isVisualizeAllowed"
+                              title="isVisualizeAllowed">
+                              <option value="Y">Yes</option>
+                              <option value="N">No</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="row">
+
+
+
+                          {{!-- <div class="form-group col-md-3">
+                            <label for="dlrPushUrl" class="col-form-label">DLR Push URL</label>
+                            <input type="text" class="form-control" id="dlrPushUrl" name="dlrPushUrl"
+                              title="DLR Push URL" placeholder="DLR Push URL">
+                          </div> --}}
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="userAccountType" class=" col-form-label">User Account Type</label>
+                            <select class="custom-select" id="userAccountType" name="userAccountType"
+                              title="userAccountType">
+                              <option value="SMPP">SMPP</option>
+                              <option value="WEB">WEB</option>
+                              <option value="API">API</option>
+                            </select>
+                          </div>
+                          {{!-- SMPP charset --}}
+                          <div class="form-group col-md-3 col-sm-6 smppCharset">
+                            <label for="smppCharset" class=" col-form-label">SMPP Charset</label>
+                            <select class="custom-select" id="smppCharset" name="smppCharset"
+                              title="smppCharset">
+                              <option value="ASCII">ASCII</option>
+                              <option value="GSM">GSM</option>
+                            </select>
+                          </div>
+                          {{!-- SMPP End code --}}
+                          <div class="form-group col-md-3 col-sm-6 userAccountTypeTxDiv">
+                            <label for="userAccountTypeTx" class="col-form-label">T<sub>X</sub></label>
+                            <select class="custom-select" id="userAccountTypeTx" name="txSession"
+                              title="userAccountTypeTx">
+                              <option value="0">0</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                              <option value="11">11</option>
+                              <option value="12">12</option>
+                              <option value="13">13</option>
+                              <option value="14">14</option>
+                              <option value="15">15</option>
+                              <option value="16">16</option>
+                              <option value="17">17</option>
+                              <option value="18">18</option>
+                              <option value="19">19</option>
+                              <option value="20">20</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group col-md-3 col-sm-6 userAccountTypeRxDiv">
+                            <label for="userAccountTypeRx" class="col-form-label">R<sub>X</sub></label>
+                            <select class="custom-select" id="userAccountTypeRx" name="rxSession"
+                              title="userAccountTypeRx">
+                              <option value="0">0</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                              <option value="11">11</option>
+                              <option value="12">12</option>
+                              <option value="13">13</option>
+                              <option value="14">14</option>
+                              <option value="15">15</option>
+                              <option value="16">16</option>
+                              <option value="17">17</option>
+                              <option value="18">18</option>
+                              <option value="19">19</option>
+                              <option value="20">20</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group col-md-3 col-sm-6 userAccountTypeTRxDiv">
+                            <label for="userAccountTypeTRx" class="col-form-label">TR<sub>X</sub></label>
+                            <select class="custom-select" id="userAccountTypeTRx" name="trxSession"
+                              title="userAccountTypeTRx">
+                              <option value="0">0</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                              <option value="11">11</option>
+                              <option value="12">12</option>
+                              <option value="13">13</option>
+                              <option value="14">14</option>
+                              <option value="15">15</option>
+                              <option value="16">16</option>
+                              <option value="17">17</option>
+                              <option value="18">18</option>
+                              <option value="19">19</option>
+                              <option value="20">20</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="status" class="col-form-label">Status</label>
+                            <select class="custom-select" id="status" name="status" title="Status">
+                              <option value="active">Active</option>
+                              <option value="inactive">Inactive</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="expiry" class=" col-form-label">Expiry Date</label>
+                            <input type="text" class="form-control" id="expiry" name="userExpiryDate" value=""
+                              placeholder="Expiry">
+                          </div>
+
+                          {{!-- <div class="form-group col-md-3 col-sm-6">
+                            <label for="rejectFailedNumber" class="col-form-label">Reject Failed Number</label>
+                            <select class="custom-select" id="rejectFailedNumber" name="rejectFailedNumber" title="Status">
+                              <option value="Yes">Yes</option>
+                              <option value="No" selected>No</option>
+                            </select>
+                          </div> --}}
+
+                        </div>
+
+                      </section>
+
+                      <h3>User Profile</h3>
+
+                      <section>
+                        <div class="row">
+                          <div class="form-group col-md-4 col-sm-6">
+                            <label for="orgName" class="col-form-label">Organisation</label>
+                            {{!-- <input type="text" class="form-control dropdown orgName" id="orgName" name="orgName"
+                              value="" placeholder="Organisation"> --}}
+                              <br>
+                            <select class="form-control select2 orgName" id="orgName" name="orgId">
+                            </select>
+                          </div>
+
+                          <div class="form-group col-md-4 col-sm-6">
+                            <label for="deptName" class="col-form-label">Department</label>
+                            {{!-- <input type="text" class="form-control dropdown deptName" id="deptName" name="deptName"
+                              value="" placeholder="Department"> --}}
+                            <select class="form-control select2 deptName" id="deptName" name="deptId">
+                            </select>
+                          </div>
+
+                          <div class="form-group col-md-4 col-sm-6">
+                            <label for="email" class="col-form-label">Email ID</label>
+                            <input type="text" class="form-control" id="email" name="email" value=""
+                              placeholder="Email Id">
+                          </div>
+
+                          <div class="form-group col-md-4 col-sm-6">
+                            <label for="mobile" class="col-form-label">Mobile Number</label>
+                            <input type="text" class="form-control" id="mobile" name="mobile" value=""
+                              placeholder="Mobile Number">
+                          </div>
+
+                          <div class="form-group col-md-4 col-sm-6">
+                            <label for="accountManagerName" class="col-form-label">Account manager</label>
+                            {{!-- <input type="text" class="form-control accountManagerName dropdown" id="accountManagerName"
+                              name="accountManagerName" value="" placeholder="Account manager"> --}}
+                              <select class="form-control select2 accountManagerName" id="accountManagerName" name="accountManagerName">
+                            </select>
+                          </div>
+
+                        </div>
+                      </section>
+                      <h3>User Permissions</h3>
+                      <section>
+                        <div class="row">
+                          <div class="col-md-12">
+
+                            <div class="form-group row">
+                              <label for="dndCheck-0" class="col-sm-4 col-form-label">DND Check</label>
+                              <div class="col-sm-6">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isDndCheck" value="Yes"
+                                    id="dndCheck-0" title="DND Check"> <label class="form-check-label"
+                                    for="dndCheck-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isDndCheck" value="No"
+                                    id="dndCheck-1" title="DND Check" checked="checked"> <label class="form-check-label"
+                                    for="dndCheck-1">No</label>
+                                </div>
+                              </div>
+                            </div>
+
+                            {{!-- <div class="form-group row">
+                              <label for="creditHistory-0" class="col-sm-4 col-form-label">Credit history</label>
+                              <div class="col-sm-6">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isCreditHistoryAllowed" value="Yes"
+                                    id="creditHistory-0" title="Credit history"> <label class="form-check-label"
+                                    for="creditHistory-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isCreditHistoryAllowed" value="No"
+                                    id="creditHistory-1" title="Credit history" checked="checked"> <label
+                                    class="form-check-label" for="creditHistory-1">No</label>
+                                </div>
+                              </div>
+                            </div> --}}
+
+                            {{!-- <div class="form-group row">
+                              <label for="isCreditRefund-0" class="col-sm-4 col-form-label">Credit Refund</label>
+                              <div class="col-sm-6">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isCreditRefund" value="Yes"
+                                    id="isCreditRefund-0" title="Credit history"> <label class="form-check-label"
+                                    for="isCreditRefund-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isCreditRefund" value="No"
+                                    id="isCreditRefund-1" title="Credit history" checked="checked"> <label
+                                    class="form-check-label" for="isCreditRefund-1">No</label>
+                                </div>
+                              </div>
+                            </div> --}}
+
+                            {{!-- <div class="form-group row">
+                              <label for="autoFailureRefund-0" class="col-sm-4 col-form-label">Automatic Failure
+                                Refund</label>
+                              <div class="col-sm-6">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="autoFailureRefund" value="Y"
+                                    id="autoFailureRefund-0" title="Automatic Failure Refund"> <label
+                                    class="form-check-label" for="autoFailureRefund-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="autoFailureRefund" value="N"
+                                    id="autoFailureRefund-1" title="Automatic Failure Refund" checked="checked"> <label
+                                    class="form-check-label" for="autoFailureRefund-1">No</label>
+                                </div>
+                              </div>
+                            </div> --}}
+
+                            <div class="form-group row mobileNumberMasking">
+                              <label for="mobileNumberMasking-0" class="col-sm-4 col-form-label">Mobile Number
+                                Masking</label>
+                              <div class="col-sm-2">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isNumberMasking" value="Yes"
+                                    id="mobileNumberMasking-0" title="Mobile Number Masking"> <label
+                                    class="form-check-label" for="mobileNumberMasking-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isNumberMasking" value="No"
+                                    id="mobileNumberMasking-1" title="Mobile Number Masking" checked="checked"> <label
+                                    class="form-check-label" for="mobileNumberMasking-1">No</label>
+                                </div>
+                              </div>
+                              <div class="col-md-6 numberMaskingCount">
+                                <label for="numberMaskingCount" class="col-form-label col-md-6">Masking
+                                  Count</label>
+                                <select class="custom-select col-md-2" id="numberMaskingCount" name="numberMaskingCount"
+                                  title="numberMaskingCount" disabled>
+                                  <option value="0">0</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            {{!-- <div class="form-group row">
+                              <label for="isContentFilterAllowed-0" class="col-sm-4 col-form-label">Content
+                                Filter</label>
+                              <div class="col-sm-2">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isContentFilterAllowed" value="Yes"
+                                    id="isContentFilterAllowed-0" title="Message Filter"> <label
+                                    class="form-check-label" for="isContentFilterAllowed-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isContentFilterAllowed" value="No"
+                                    id="isContentFilterAllowed-1" title="Message Filter" checked="checked"> <label
+                                    class="form-check-label" for="isContentFilterAllowed-1">No</label>
+                                </div>
+                              </div>
+                              <div class="abusingWordsLimit col-md-6">
+                                <label for="abusingWordsLimit" class="col-form-label col-md-6 ">Abusive Words
+                                  Count</label>
+                                <select class="custom-select col-md-2" id="abusingWordsLimit" name="abusingWordsLimit"
+                                  title="abusingWordsLimit" disabled>
+                                  <option value="0">0</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                                  <option value="6">6</option>
+                                  <option value="7">7</option>
+                                  <option value="8">8</option>
+                                  <option value="9">9</option>
+                                  <option value="10">10</option>
+                                </select>
+                              </div>
+                            </div> --}}
+
+                            {{!-- <div class="form-group row">
+                              <label for="dlrRetry-0" class="col-sm-4 col-form-label">DLR Retry</label>
+                              <div class="col-sm-2">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isDlrRetryAllowed" value="Yes"
+                                    id="dlrRetry-0" title="DLR Retry"> <label class="form-check-label"
+                                    for="dlrRetry-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isDlrRetryAllowed" value="No"
+                                    id="dlrRetry-1" title="DLR Retry" checked="checked"> <label class="form-check-label"
+                                    for="dlrRetry-1">No</label>
+                                </div>
+                              </div>
+                              <div class="col-md-6 maxDlrRetry">
+                                <label for="dlrRetryCount" class="col-form-label col-md-6">Max DLR Retry
+                                  Count</label>
+                                <select class="custom-select col-md-2" id="dlrRetryCount" name="dlrRetryCount"
+                                  title="dlrRetryCount">
+                                  <option value="0">0</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                                </select>
+                              </div>
+                            </div> --}}
+
+                            <div class="form-group row">
+                              <label for="isLowCreditAlert-0" class="col-sm-4 col-form-label">Low credit
+                                notification</label>
+                              <div class="col-sm-2">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isLowCreditAlert" value="Yes"
+                                    id="isLowCreditAlert-0" title="Low credit notification"> <label
+                                    class="form-check-label" for="isLowCreditAlert-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isLowCreditAlert" value="No"
+                                    id="isLowCreditAlert-1" title="Low credit notification" checked="checked"> <label
+                                    class="form-check-label" for="isLowCreditAlert-1">No</label>
+                                </div>
+                              </div>
+                              <div class="lowCreditAlertLimit col-md-6">
+                                <label class="col-form-label col-sm-6">Notify if credit value reaches</label>
+                                <input style="display: inline-block;" type="text" class="form-control col-sm-3"
+                                  id="lowCreditAlertLimit" name="lowCreditAlertLimit" placeholder="Credit Limit"
+                                  required pattern="\d{10}" disabled>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                        </div>
+                      </section>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="view" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <br><br>
+                <div class="frm-border">
+                  <form id="view-routing-form" action="#" autocomplete="off">
+
+                    <div class="row" id="view-external-user">
+                      <div class="col-md-3 adminNameDiv">
+                        <label for="adminName">Select Admin</label>
+                        <!-- <input type="text" id="resellerName" name="resellerName"
+                          class="form-control select2 dropdown resellerName" /> -->
+                          <select  id="adminName" name="adminName" class="form-control select2 viewUser  dropdown  adminName">
+                            <option value="" class="selectSection">-- Select --</option>
+                          </select>
+                      </div>
+                      <div class="col-md-3 resellerNameDiv">
+                        <label for="resellerName">Select Reseller</label>
+                        <!-- <input type="text" id="resellerName" name="resellerName"
+                          class="form-control select2 dropdown resellerName" /> -->
+                          <select  id="resellerName" name="resellerName" class="form-control select2 viewUser  dropdown  resellerName">
+                            <option value="" class="selectSection">-- Select --</option>
+                          </select>
+                      </div>
+
+                      <div class="col-md-3 sellerNameDiv">
+                        <label for="sellerName">Select Seller</label>
+                        <!-- <input type="text" id="sellerName" name="sellerName" class="form-control dropdown sellerName" /> -->
+                        <select  id="sellerName" name="sellerName" class="form-control select2 viewUser dropdown  sellerName">
+                          <option value="" class="selectSection">-- Select --</option>
+                        </select>
+                      </div>
+
+                      <div class="col-md-3 clientNameDiv">
+                        <label for="clientName">Select Client</label>
+                        <!-- <input type="text" id="clientName" name="clientName" class="form-control dropdown clientName" /> -->
+                        <select  id="clientName" name="clientName" class="form-control select2 viewUser dropdown  clientName">
+                          <option value="" class="selectSection">-- Select --</option>
+                        </select>
+                      </div>
+
+                      <div class="col-md-3">
+                        <div class="form-group mt-4 pt-2">
+                          <button type="button" id="btnSubmit" class="btn btn-primary">Submit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <div id="view-user-form" class="user-form"></div>
+              </div>
+              <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="nav-contact-tab">
+
+                <br><br>
+                <div class="frm-border">
+                  <form id="view-routing-form" action="#" autocomplete="off">
+
+                    <div class="row" id="view-external-user">
+                      <div class="col-md-3 adminNameDiv">
+                        <label for="adminName">Select Admin</label>
+                        <!-- <input type="text" id="resellerName" name="resellerName"
+                          class="form-control select2 dropdown resellerName" /> -->
+                          <select  id="adminName" name="adminName" class="form-control select2 editUser  dropdown  adminName">
+                            <option value="" class="selectSection">-- Select --</option>
+                          </select>
+                      </div>
+                      <div class="col-md-3 resellerNameDiv">
+                        <label for="resellerName">Select Reseller</label>
+                        <!-- <input type="text" id="resellerName" name="resellerName"
+                          class="form-control dropdown resellerName" /> -->
+                          <select  id="resellerNameEdit" name="resellerName" class="form-control select2  dropdown editUser  resellerNameEdit">
+                            <option value="" class="selectSection">-- Select --</option>
+                          </select>
+                      </div>
+
+                      <div class="col-md-3 sellerNameDiv">
+                        <label for="sellerName">Select Seller</label>
+                        <!-- <input type="text" id="sellerName" name="sellerName" class="form-control dropdown sellerName" /> -->
+                        <select  id="sellerNameEdit" name="sellerName" class="form-control select2  dropdown editUser sellerNameEdit">
+                          <option value="" class="selectSection">-- Select --</option>
+                        </select>
+                      </div>
+
+                      <div class="col-md-3 clientNameDiv">
+                        <label for="clientName">Select Client</label>
+                        <!-- <input type="text" id="clientName" name="clientName" class="form-control dropdown clientName" /> -->
+                        <select  id="clientNameEdit" name="clientName" class="form-control select2  dropdown editUser clientNameEdit">
+                          <option value="" class="selectSection">-- Select --</option>
+                        </select>
+                      </div>
+
+                      <div class="col-md-3">
+                        <div class="form-group mt-4 pt-2">
+                          <button type="button" id="btnSubmit" class="btn btn-primary">Submit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div id="edit-user-form" class="user-form"></div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-div">
+    <span class="copy float-left">
+      <p id="demo"></p> &copy; All Rights Reserved
+    </span>
+    <span class="float-right">
+      <ul class="social-media-icon">
+        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+      </ul>
+    </span>
+  </div>
+</div>

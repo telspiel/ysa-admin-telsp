@@ -1,0 +1,36 @@
+.accordation-header{
+    border-bottom: 1px solid #582c4f;
+    background: #582c6217;
+}
+.accordation-header .accordation-title{
+    padding-top: 15px;
+}
+.accordation-header .actions{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.accordation-header .actions span{
+    margin-right: 15px;
+    background-color: #582c4fe0 !important;
+    border-color: #582c4fe0 !important;
+}
+.accordation-header .actions span a{
+    color: #fff;
+}
+.accordation-header .actions span a i{
+    margin-right: 5px;
+}
+table{
+    margin : 0 10px;
+}
+
+div.accordation-header:hover {
+    cursor: pointer !important;
+    background: #582c4f47;
+}
+
+div.accordation-header.active {
+    background: #582c4f47;
+}
+th { white-space: nowrap; }
+table.dataTable th.dt-center, td.dt-center { text-align: center !important; }

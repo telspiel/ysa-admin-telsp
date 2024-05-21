@@ -1,0 +1,104 @@
+{{> sideNav }}
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+  <div class="pcoded-content">
+    <!-- [ Main Content ] start -->
+    <div class="p-0">
+      <div class="p-0 contant-holder">
+        <!-- contant holder start -->
+        <h3 class="main-head-3">Manage Connect</h3>
+        <!-- contant holder end -->
+        <div class="col-md-12 pt-2 pb-5">
+
+          <div class="col-md-12 p-0">
+            <main class="px-4 py-3">
+              <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <a class="nav-item nav-link active" id="viewConnects" data-toggle="tab" href="#view" role="tab"
+                    aria-controls="view" aria-selected="true">View Connects</a>
+                  <a class="nav-item nav-link" id="editConnects" data-toggle="tab" href="#edit" role="tab"
+                    aria-controls="edit" aria-selected="true">Edit Connects</a>
+                </div>
+              </nav>
+
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="view" role="tabpanel" aria-labelledby="nav-home-tab">
+                  <div id="view-connects">
+                    <br />
+                    
+                    <ul id="tree2">
+
+                    </ul>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="nav-home-tab">
+                  <div id="edit-connects">
+                    <br />
+                    <form id="updateKernal" action="#" method="post" autocomplete="off">
+                      <div class="row">
+                        <div class="col-md-3 adminNameDiv">
+                          <label for="groupSelect">Select Group</label>
+                          <select type="text" class="form-control select2 dropdown" id="groupSelect" required>
+                            <option value="">-- Select --</option>
+                          </select>
+                        </div>
+                      </div>
+                    
+                    <br />
+                    <div class="d-none" id="kernalPart">
+                   {{!-- <p style="margin-bottom: 0px;"><strong id="selectedGroup"></strong></p> --}}
+                      <small>Note : Validation - Total % of the group cannot be more or less than 100</small>
+                      <br /><br />
+
+                      <div class="form-group updateKennals">
+                        {{!-- <label for="creditToBeAdded" class="col-md-1 col-form-label">Kernal 3</label> --}}
+                        <div class="kennalRow row">
+                          <div class="col-md-3">
+                            <select type="text" class="form-control select2 dropdown kernalSelect" id="kernalSelect" name="kernalSelect" required>
+                              <option value="">-- Select --</option>
+                            </select>
+                          </div>
+                          <div class="col-md-2">
+                            <input type="number" class="form-control kernalPercentage" name="kernalPercentage" value=""
+                              title="Percentage" placeholder="" required="" min="1" max="100">
+                          </div>
+                          <span>%</span>
+                          <div class="col-md-2">
+                            <button id="addMoreRows" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i>&ensp;Add More</button>
+                          </div>
+                          <br/><br/><br/>
+                        </div>
+                      </div>
+
+                      <button type="submit" class="btn btn-primary">Save</button>
+                      <button type="reset" class="btn btn-danger">Cancel</button>
+                    </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+
+        </div>
+      </div>
+      <!-- [ Main Content ] end -->
+    </div>
+    {{> mainLoader }}
+
+  </div>
+  <div class="footer-div">
+    <span class="copy float-left">
+      <p id="demo"></p> &copy; All Rights Reserved
+    </span>
+    <span class="float-right">
+      <ul class="social-media-icon">
+        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+      </ul>
+    </span>
+  </div>
+</div>

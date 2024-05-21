@@ -1,0 +1,131 @@
+{{> sideNav this }}
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+  <div class="pcoded-content">
+    <!-- [ Main Content ] start -->
+    <div class="p-0">
+      <div class="p-0 contant-holder">
+        <!-- contant holder start -->
+        <h3 class="main-head-3">Department Management</h3>
+        <!-- contant holder end -->
+        <div class="col-md-12 pt-2 pb-5">
+          <main class="px-4 py-3">
+            <div id="alert-box" class="alert-box"></div>
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="add-department-tab" data-toggle="tab" href="#add" role="tab"
+                  aria-controls="add" aria-selected="true">Add</a>
+                <a class="nav-item nav-link" id="view-department-tab" data-toggle="tab" href="#view" role="tab"
+                  aria-controls="view" aria-selected="false">View</a>
+                <a class="nav-item nav-link" id="edit-department-tab" data-toggle="tab" href="#edit" role="tab"
+                  aria-controls="edit" aria-selected="false">Edit</a>
+              </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="add" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div id="add-department-form" class="department-form">
+                  <br>
+                  <br>
+                  <form id="add-department" action="#" method="post" autocomplete="off">
+
+                    <div class="row">
+                      <div class="form-group col-md-3 col-sm-6">
+                        <label for="orgName" class="col-form-label"><b>Choose Organization</b></label>
+                        <input type="text" class="form-control dropdown orgName" id="orgName" name="orgName" value=""
+                          placeholder="Org Name" required>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group col-md-3 col-sm-6">
+                        <label for="deptName" class="col-form-label">Department</label>
+                        <input type="text" class="form-control" id="deptName" name="deptName" value=""
+                          placeholder="Dept Name" required>
+                      </div>
+
+                      <div class="form-group col-md-3 col-sm-6">
+                        <label for="deptEmailId" class="col-form-label">Email ID</label>
+                        <input type="email" class="form-control" id="deptEmailId" name="deptEmailId" value=""
+                          placeholder="Email Id" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}">
+                      </div>
+
+                      <div class="form-group col-md-3 col-sm-6">
+                        <label for="deptContactNumber" class="col-form-label">Mobile Number</label>
+                        <input type="text" class="form-control" id="deptContactNumber" name="deptContactNumber" value=""
+                          placeholder="Mobile Number" pattern="\d{10}" required>
+                      </div>
+
+                      <div class="form-group col-md-2 col-sm-6">
+                        <label for="deptStatus" class="col-form-label">Status</label>
+                        <select class="custom-select" id="deptStatus" name="deptStatus" title="Status">
+                          <option value="active">Active</option>
+                          <option value="inactive">Inactive</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="text-center">
+                      <br><br>
+                      <input type="submit" value="Submit" class="btn btn-success" />
+                      <input type="reset" value="Reset" class="btn btn-danger" />
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="view" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <br>
+                <br>
+
+                <div class="form-group row">
+                  <label for="orgName" class="col-form-label col-md-3 col-sm-6"><b>Choose Organization</b></label>
+                  <input type="text" class="form-control dropdown orgName col-md-12 col-sm-6" id="orgName"
+                    name="orgName" value="" placeholder="Organization Name" required>
+                </div>
+
+                <div class="form-group row d-none" id="deptDropDown">
+                  <label for="deptName" class="col-form-label col-md-3 col-sm-6"><b>Choose Department</b></label>
+                  <input type="text" class="form-control dropdown deptName col-md-12 col-sm-6" id="deptName"
+                    name="deptName" value="" placeholder="Department Name" required>
+                </div>
+
+                <div id="view-department-form" class="department-form"></div>
+              </div>
+              <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <br>
+                <br>
+                <div class="form-group row">
+                  <label for="orgName" class="col-form-label col-md-3 col-sm-6"><b>Choose Organization</b></label>
+                  <input type="text" class="form-control dropdown orgName col-md-12 col-sm-6" id="orgName"
+                    name="orgName" value="" placeholder="Organization Name" required>
+                </div>
+
+                <div class="form-group row d-none" id="deptDropDown">
+                  <label for="deptName" class="col-form-label col-md-3 col-sm-6"><b>Choose Department</b></label>
+                  <input type="text" class="form-control dropdown deptName col-md-12 col-sm-6" id="deptName"
+                    name="deptName" value="" placeholder="Department Name" required>
+                </div>
+
+                <div id="edit-department-form" class="department-form"></div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-div">
+    <span class="copy float-left">
+      <p id="demo"></p> &copy; All Rights Reserved
+    </span>
+    <span class="float-right">
+      <ul class="social-media-icon">
+        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+      </ul>
+    </span>
+  </div>
+</div>

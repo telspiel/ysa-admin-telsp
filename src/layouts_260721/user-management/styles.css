@@ -1,0 +1,23 @@
+.user-form {
+  padding: 30px 10px;
+  /* width: 50%; */
+}
+.wizard > .content{
+  background: #4099ff1c;
+  border: 1px solid #4099ff;
+}
+.wizard > .content > .body{
+  position: inherit !important;
+}
+.userSearch input{
+  border: 1px solid #ced4da;
+    border-radius: 5px;
+    height: calc(1.5em + 0.5rem + 2px);
+}
+.userSearch .fa-search{
+background: #4099ff;
+padding: 6px;
+border: 1px solid #4099ff;
+color: white;
+cursor: pointer;
+}

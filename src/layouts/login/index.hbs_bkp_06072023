@@ -1,0 +1,47 @@
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <form id="login-form" class="login100-form validate-form" action="/dashboard" autocomplete="off">
+                <span class="login100-form-title p-b-60">
+                    Login Page
+                </span>
+                <div class="below-login">
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        <input class="input100" type="text" id="userId" aria-describedby="userId" placeholder="Enter Username">
+                        {{!-- <span class="focus-input100"></span>
+                        <span class="label-input100">Enter Username</span> --}}
+                    </div>
+
+
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <input class="input100" type="password" id="userPass" placeholder="Enter Password">
+                        {{!-- <span class="focus-input100"></span>
+                        <span class="label-input100">Enter Password</span> --}}
+                    </div>
+
+                    <div class="flex-sb-m w-full p-t-3 p-b-32">
+                        <div class="contact100-form-checkbox">
+                            <input class="input-checkbox100" type="checkbox" id="remember-me">
+                            <label class="label-checkbox100" for="remember-me">
+                                Remember me
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            Login
+                        </button>
+                    </div>
+
+                    <div class="w-full p-t-10">&copy; All Rights Reserved</div>
+                    </div>
+
+            </form>
+
+            <div class="login100-more" style="background-image:url('images/login-image.jpg');">
+            </div>
+        </div>
+    </div>
+</div>

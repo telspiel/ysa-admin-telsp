@@ -1,0 +1,21 @@
+.autocomplete{
+    width: auto;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    height: 33px;
+}
+
+.autocomplete .dropdown{
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+#pendingApprovalTable_filter,#senderIDTable_filter{
+    display: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

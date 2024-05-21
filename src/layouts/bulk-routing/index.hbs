@@ -1,0 +1,161 @@
+{{> sideNav }}
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+    <div class="pcoded-content">
+        <!-- [ Main Content ] start -->
+        <div class="p-0">
+            <div class="p-0 contant-holder">
+                <!-- contant holder start -->
+                <h3 class="main-head-3">Switch Gateway</h3>
+                <!-- contant holder end -->
+                <div class="col-md-12 pt-2 pb-5">
+
+                    <div class="col-md-12 p-0">
+                        <main class="px-4 py-3">
+
+                            <br />
+                            <div class="frm-border">
+                                <form id="view-routing-form" action="#" autocomplete="off">
+                                    <div class="row">
+                                        <div class="col-md-3 userNameDiv">
+                                            <label for="userType">User Type</label>
+                                            <select id="userType" data-name="userType"
+                                                class="form-control select2 dropdown userType" name="userType">
+                                                <option value="">-- Select --</option>
+                                                <option value="0">all</option>
+                                                <option value="1">superadmin</option>
+                                                <option value="2">reseller</option>
+                                                <option value="3">seller</option>
+                                                <option value="4">client</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 routingTypeDiv">
+                                            <label for="routingType">Routing Type</label>
+                                            <select id="routingType" data-name="routingType"
+                                                class="form-control select2 dropdown routingType" name="routingType">
+                                                {{!-- <option value="0" selected>all</option> --}}
+                                                <option value="">-- Select --</option>
+                                                <option value="1">trans</option>
+                                                <option value="2">promo</option>
+                                                <option value="3">trans_promo_dnd</option>
+                                                <option value="4">trans_promo_non_dnd</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-3 groupDiv">
+                                            <label for="group">Group Name</label>
+                                            <select id="group" data-name="group" class="form-control group select2 dropdown"
+                                                name="group">
+                                            <option value="0">-- Select --</option>    
+                                            </select>
+                                        </div>
+
+
+
+                                        <div class="col-md-3">
+                                            <div class="form-group mt-4 pt-2">
+                                                <button type="button" id="btnSubmit"
+                                                    class="btn btn-primary">Submit</button>
+                                                <input type="reset" id="resetButton" value="Reset"
+                                                    class="btn btn-danger" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+
+                            <table id="tdata" class="table table-striped table-sm table-bordered dt-responsive nowrap"
+                                style="width:100%">
+
+                                {{!-- <thead>
+                                    <tr>
+                                        <th>SELECT ALL</th>
+                                        <th>UserName</th>
+                                        <th>Routing Type</th>
+                                    </tr>
+                                </thead> --}}
+
+
+
+
+                            </table>
+
+
+
+                            <br />
+
+                            <div class="col-md-12 pl-10">
+                                <button type="submit" id="update-btn" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#myModal">Update Group</button>
+                            </div>
+                            <br />
+
+                    </div>
+
+
+
+
+                </div>
+                </main>
+
+
+
+
+
+
+                <!-- Modal -->
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Edit Routing</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="circleoperatorDropdown">
+                                    <div><b>Routing Type : </b><span id="routingTypeData"></span></div>
+                                    <br />
+                                    <div class="row">
+
+
+                                        <div class="col-md-3 update-groupDiv">
+                                            <label for="update-group">Group Name</label>
+                                            <select id="update-group" data-name="update-group"
+                                                class="form-control update-group" name="update-group">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" id="update-grp"
+                                    data-dismiss="modal">Update</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+            <div class="footer-div">
+                <span class="copy float-left">
+                    <p id="demo"></p> &copy; All Rights Reserved
+                </span>
+                <span class="float-right">
+                    <ul class="social-media-icon">
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                    </ul>
+                </span>
+            </div>

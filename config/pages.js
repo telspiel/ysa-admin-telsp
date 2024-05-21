@@ -1,0 +1,709 @@
+const _ = require("lodash");
+
+class PageConfig {
+  constructor() {
+    this.pages = [
+      {
+        name: "login",
+        entypoint: "./src/layouts/login",
+        store: {
+          title: "Login",
+          scripts: [
+            "js/jquery.js",
+            "js/popper.js",
+            "js/bootstrap.js",
+            "js/vendor.js",
+            "js/common.js",
+            "js/login.js",
+            "login-styles/vendor/animsition/js/animsition.min.js",
+            "login-styles/vendor/select2/select2.min.js",
+            "login-styles/vendor/daterangepicker/moment.min.js",
+            "login-styles/vendor/daterangepicker/daterangepicker.js",
+            "login-styles/vendor/countdowntime/countdowntime.js",
+            "login-styles/js/main.js"
+          ],
+          styles: [
+            "css/bootstrap.min.css",
+            "css/login.css",
+            "font-awesome/css/font-awesome.min.css",
+            "login-styles/fonts/Linearicons-Free-v1.0.0/icon-font.min.css",
+            "login-styles/vendor/animate/animate.css",
+            "login-styles/vendor/css-hamburgers/hamburgers.min.css",
+            "login-styles/vendor/animsition/css/animsition.min.css",
+            "login-styles/vendor/select2/select2.min.css",
+            "login-styles/vendor/daterangepicker/daterangepicker.css",
+            "login-styles/css/util.css",
+            "login-styles/css/main.css"
+          ],
+          navDisplay: true
+        }
+      },
+      {
+        name: "dashboard",
+        entypoint: "./src/layouts/dashboard",
+        store: {
+          title: "Dashboard",
+          scripts: [
+            "../js/vendor-all.min.js",// new
+            "../js/bootstrap.min.js",// new js
+            "../js/pcoded.min.js", // new
+            "../js/plugins/apexcharts.min.js", // new
+            "../js/pages/chart-apex.js",
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/dashboard.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css", "../font-awesome/css/font-awesome.min.css"],
+          dashboard: true
+        }
+      },
+      {
+        name: "internal-user",
+        entypoint: "./src/layouts/internal-user",
+        store: {
+          title: "User Management",
+          scripts: [
+            "../js/vendor-all.min.js",// new
+            "../js/bootstrap.min.js",// new js
+            "../js/pcoded.min.js", // new
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../js/autocomplete.min.js",
+            "../js/jquery.steps.min.js",
+            "../../datepicker/js/datetimepicker.js",
+            "../js/internal-user.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../font-awesome/css/font-awesome.min.css",
+            "../css/jquery.steps.css",
+            "../../datepicker/css/jquery-ui.css",
+            "../../datepicker/css/datetimepicker.css", "../css/jquery.steps.css"],
+          userMgmt: true
+        }
+      },
+      {
+        name: "external-user",
+        entypoint: "./src/layouts/external-user",
+        store: {
+          title: "User Management",
+          scripts: [
+            "../js/vendor-all.min.js",// new
+            "../js/bootstrap.min.js",// new js
+            "../js/pcoded.min.js", // new
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../js/autocomplete.min.js",
+            "../js/jquery.validate.min.js",
+            "../js/autocomplete.min.js",
+            "../js/jquery.steps.min.js",
+            "../../datepicker/js/datetimepicker.js",
+            "../js/external-user.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../font-awesome/css/font-awesome.min.css",
+            // "../css/jquery.steps.css",
+            // "../../datepicker/css/jquery-ui.css",
+            "../../datepicker/css/datetimepicker.css", "../css/jquery.steps.css"],
+          userMgmt: true
+        }
+      },
+      {
+        name: "listUser",
+        entypoint: "./src/layouts/list-user",
+        store: {
+          title: "List User",
+          scripts: [
+            "../js/vendor-all.min.js",// new
+            "../js/bootstrap.min.js",// new js
+            "../js/pcoded.min.js", // new
+            "../js/boot_typeahead.js",
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../../datatable/js/jquery.dataTables.min.js",
+            "../../datatable/js/dataTables.bootstrap4.min.js",
+            "../../datatable/js/dataTables.responsive.min.js",
+            "../js/listUser.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../../datatable/css/dataTables.bootstrap4.min.css",
+            "../../datatable/css/responsive.bootstrap4.min.css",
+            "../font-awesome/css/font-awesome.min.css",
+            "../css/datetimepicker.css", "../css/jquery.steps.css"],
+          listUser: true
+        }
+      },
+      {
+        name: "mis",
+        entypoint: "./src/layouts/mis",
+        store: {
+          title: "MIS",
+          scripts: [
+            "../js/vendor-all.min.js",// new
+            "../js/bootstrap.min.js",// new js
+            "../js/pcoded.min.js", // new
+            // "../js/boot_typeahead.js",
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../../datatable/js/jquery.dataTables.min.js",
+            "../../datatable/js/dataTables.bootstrap4.min.js",
+            "../../datatable/js/dataTables.responsive.min.js",
+            "../../datepicker/js/jquery-ui.js",
+            "../../datepicker/js/datetimepicker.js",
+            "../js/mis.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../../datatable/css/dataTables.bootstrap4.min.css",
+            "../../datatable/css/responsive.bootstrap4.min.css",
+            "../font-awesome/css/font-awesome.min.css",
+            "../../datepicker/css/jquery-ui.css", "../../datepicker/css/datetimepicker.css", "../css/jquery.steps.css"],
+          mis: true
+        }
+      },
+      {
+        name: "summary-report",
+        entypoint: "./src/layouts/summary-report",
+        store: {
+          title: "Summary Report",
+          scripts: [
+            "../js/vendor-all.min.js",// new
+            "../js/bootstrap.min.js",// new js
+            "../js/pcoded.min.js", // new
+            "../js/boot_typeahead.js",
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../../datatable/js/jquery.dataTables.min.js",
+            "../../datatable/js/dataTables.bootstrap4.min.js",
+            "../../datatable/js/dataTables.responsive.min.js",
+            "../../datepicker/js/jquery-ui.js",
+            "../../datepicker/js/datetimepicker.js",
+            "../js/summary-report.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../../datatable/css/dataTables.bootstrap4.min.css",
+            "../../datatable/css/responsive.bootstrap4.min.css",
+            "../font-awesome/css/font-awesome.min.css",
+            "../../datepicker/css/jquery-ui.css", "../../datepicker/css/datetimepicker.css", "../css/jquery.steps.css"],
+          summaryReport: true
+        }
+      },
+      {
+        name: "user-summary-report",
+        entypoint: "./src/layouts/user-summary-report",
+        store: {
+          title: "User Summary Report",
+          scripts: [
+            "../js/vendor-all.min.js",// new
+            "../js/bootstrap.min.js",// new js
+            "../js/pcoded.min.js", // new
+            "../js/boot_typeahead.js",
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../../datatable/js/jquery.dataTables.min.js",
+            "../../datatable/js/dataTables.bootstrap4.min.js",
+            "../../datatable/js/dataTables.responsive.min.js",
+            "../../datepicker/js/jquery-ui.js",
+            "../../datepicker/js/datetimepicker.js",
+            "../js/user-summary-report.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../../datatable/css/dataTables.bootstrap4.min.css",
+            "../../datatable/css/responsive.bootstrap4.min.css",
+            "../font-awesome/css/font-awesome.min.css",
+            "../../datepicker/css/jquery-ui.css", "../../datepicker/css/datetimepicker.css", "../css/jquery.steps.css"],
+          userSummaryReport: true
+        }
+      },
+      {
+        name: "senderId-report",
+        entypoint: "./src/layouts/senderId-report",
+        store: {
+          title: "SenderId Report",
+          scripts: [
+            "../js/vendor-all.min.js",// new
+            "../js/bootstrap.min.js",// new js
+            "../js/pcoded.min.js", // new
+            "../js/boot_typeahead.js",
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../../datatable/js/jquery.dataTables.min.js",
+            "../../datatable/js/dataTables.bootstrap4.min.js",
+            "../../datatable/js/dataTables.responsive.min.js",
+            "../../datepicker/js/jquery-ui.js",
+            "../../datepicker/js/datetimepicker.js",
+            "../js/senderId-report.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../../datatable/css/dataTables.bootstrap4.min.css",
+            "../../datatable/css/responsive.bootstrap4.min.css",
+            "../font-awesome/css/font-awesome.min.css",
+            "../../datepicker/css/jquery-ui.css", "../../datepicker/css/datetimepicker.css", "../css/jquery.steps.css"],
+          senderIdReport: true
+        }
+      },
+      {
+        name: "custom-summary-report",
+        entypoint: "./src/layouts/custom-summary-report",
+        store: {
+          title: "Custom Summary Report",
+          scripts: [
+            "../js/vendor-all.min.js",// new
+            "../js/bootstrap.min.js",// new js
+            "../js/pcoded.min.js", // new
+            "../js/boot_typeahead.js",
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../../datatable/js/jquery.dataTables.min.js",
+            "../../datatable/js/dataTables.bootstrap4.min.js",
+            "../../datatable/js/dataTables.responsive.min.js",
+            "../../datepicker/js/jquery-ui.js",
+            "../../datepicker/js/datetimepicker.js",
+            "../js/custom-summary-report.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../../datatable/css/dataTables.bootstrap4.min.css",
+            "../../datatable/css/responsive.bootstrap4.min.css",
+            "../../datepicker/css/jquery-ui.css", "../../datepicker/css/datetimepicker.css",
+            "../font-awesome/css/font-awesome.min.css", "../css/jquery.steps.css"],
+          customSummaryReport: true
+        }
+      },
+      {
+        name: "credits-management",
+        entypoint: "./src/layouts/credits-management",
+        store: {
+          title: "Credits Management",
+          scripts: [
+            "../js/vendor-all.min.js",// new
+            "../js/bootstrap.min.js",// new js
+            "../js/pcoded.min.js", // new
+            "../js/moment.js",
+            "../js/typeahead.js",
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/credits-management.js",
+            "../../datatable/js/jquery.dataTables.min.js",
+            "../../datatable/js/dataTables.bootstrap4.min.js",
+            "../../datatable/js/dataTables.responsive.min.js",
+            "../../datepicker/js/jquery-ui.js",
+            "../../datepicker/js/datetimepicker.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css",
+            "../../datatable/css/dataTables.bootstrap4.min.css",
+            "../../datatable/css/responsive.bootstrap4.min.css",
+            "../../datepicker/css/jquery-ui.css",
+            "../../datepicker/css/datetimepicker.css",
+            "../css/new_style.css", "../font-awesome/css/font-awesome.min.css"],
+          credMgmt: true
+        }
+      },
+      {
+        name: "logoUpload",
+        entypoint: "./src/layouts/logo-upload",
+        store: {
+          title: "Logo Upload",
+          scripts: [
+            "../js/vendor-all.min.js",// new
+            "../js/bootstrap.min.js",// new js
+            "../js/pcoded.min.js", // new
+            "../js/boot_typeahead.js",
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../../datatable/js/jquery.dataTables.min.js",
+            "../../datatable/js/dataTables.bootstrap4.min.js",
+            "../../datatable/js/dataTables.responsive.min.js",
+            "../js/pages/bulk_upload.js",
+            "../js/logoUpload.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../../datatable/css/dataTables.bootstrap4.min.css",
+            "../../datatable/css/responsive.bootstrap4.min.css",
+            "../font-awesome/css/font-awesome.min.css",
+            "../css/datetimepicker.css", "../css/jquery.steps.css"],
+          logoUpload: true
+        }
+      },
+      {
+        name: "connectMgmt",
+        entypoint: "./src/layouts/connect-management",
+        store: {
+          title: "Connect Management",
+          scripts: [
+            "../js/vendor-all.min.js",
+            "../js/bootstrap.min.js",
+            "../js/pcoded.min.js",
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../../datatable/js/jquery.dataTables.min.js",
+            "../../datatable/js/dataTables.bootstrap4.min.js",
+            "../../datatable/js/dataTables.responsive.min.js",
+            "../js/connectMgmt.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../../datatable/css/dataTables.bootstrap4.min.css",
+            "../../datatable/css/responsive.bootstrap4.min.css",
+            "../font-awesome/css/font-awesome.min.css",
+            "../css/datetimepicker.css", "../css/jquery.steps.css"],
+          connectMgmt: true
+        }
+      },
+      {
+        name: "generateApi",
+        entypoint: "./src/layouts/generate-api",
+        store: {
+          title: "Generate API",
+          scripts: [
+            "../js/vendor-all.min.js",// new
+            "../js/bootstrap.min.js",// new js
+            "../js/pcoded.min.js", // new
+            "../js/plugins/apexcharts.min.js", // new
+            "../js/pages/chart-apex.js",
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/generateApi.js"
+          ],
+          styles: ["../css/theme.css",
+            "../css/bootstrap.min.css",
+            "../css/new_style.css",
+            "../font-awesome/css/font-awesome.min.css"],
+          generateApi: true
+        }
+      },
+      {
+        name: "routing",
+        entypoint: "./src/layouts/routing",
+        store: {
+          title: "Routing",
+          scripts: [
+            "../js/vendor-all.min.js",
+            "../js/bootstrap.min.js",
+            "../js/pcoded.min.js",
+            "../js/boot_typeahead.js",
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../../datatable/js/jquery.dataTables.min.js",
+            "../../datatable/js/dataTables.bootstrap4.min.js",
+            "../../datatable/js/dataTables.responsive.min.js",
+            "../js/pages/bulk_upload.js",
+            "../js/routing.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../../datatable/css/dataTables.bootstrap4.min.css",
+            "../../datatable/css/responsive.bootstrap4.min.css",
+            "../font-awesome/css/font-awesome.min.css",
+            "../css/datetimepicker.css", "../css/jquery.steps.css"],
+          routing: true
+        }
+      },
+      {
+        name: "bulk-routing",
+        entypoint: "./src/layouts/bulk-routing",
+        store: {
+          title: "Bulk Routing",
+          scripts: [
+            "../js/vendor-all.min.js",
+            "../js/bootstrap.min.js",
+            "../js/pcoded.min.js",
+            "../js/boot_typeahead.js",
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../../datatable/js/jquery.dataTables.min.js",
+            "../../datatable/js/dataTables.bootstrap4.min.js",
+            "../../datatable/js/dataTables.responsive.min.js",
+            "../js/bulk-routing.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+          "../../datatable/css/dataTables.bootstrap4.min.css",
+          "../../datatable/css/responsive.bootstrap4.min.css",
+          "../font-awesome/css/font-awesome.min.css",
+          "../css/datetimepicker.css", "../css/jquery.steps.css"],
+        }
+      },
+      {
+        name: "error-code-mapping",
+        entypoint: "./src/layouts/error-code-mapping",
+        store: {
+          title: "Error Code Mapping",
+          scripts: [
+            "../js/vendor-all.min.js",
+            "../js/bootstrap.min.js",
+            "../js/pcoded.min.js",
+            "../js/boot_typeahead.js",
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../../datatable/js/jquery.dataTables.min.js",
+            "../../datatable/js/dataTables.bootstrap4.min.js",
+            "../../datatable/js/dataTables.responsive.min.js",
+            "../js/error-code-mapping.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+          "../../datatable/css/dataTables.bootstrap4.min.css",
+          "../../datatable/css/responsive.bootstrap4.min.css",
+          "../font-awesome/css/font-awesome.min.css",
+          "../css/datetimepicker.css", "../css/jquery.steps.css"],
+        }
+      },
+      {
+        name: "organization-management",
+        entypoint: "./src/layouts/organization-management",
+        store: {
+          title: "Organization Management",
+          scripts: [
+            "../js/vendor-all.min.js",// new
+            "../js/bootstrap.min.js",// new js
+            "../js/pcoded.min.js", // new
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../js/autocomplete.min.js",
+            "../../datepicker/js/datetimepicker.js",
+            "../js/organization-management.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../font-awesome/css/font-awesome.min.css",
+            "../../datepicker/css/jquery-ui.css",
+            "../../datepicker/css/datetimepicker.css", "../css/jquery.steps.css"],
+          orgnMgmt: true
+        }
+      },
+      {
+        name: "department-management",
+        entypoint: "./src/layouts/department-management",
+        store: {
+          title: "Department Management",
+          scripts: [
+            "../js/vendor-all.min.js",// new
+            "../js/bootstrap.min.js",// new js
+            "../js/pcoded.min.js", // new
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../js/autocomplete.min.js",
+            "../../datepicker/js/datetimepicker.js",
+            "../js/department-management.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../font-awesome/css/font-awesome.min.css",
+            "../../datepicker/css/jquery-ui.css",
+            "../../datepicker/css/datetimepicker.css", "../css/jquery.steps.css"],
+          deptMgmt: true
+        }
+      },
+      {
+        name: "senderId-management",
+        entypoint: "./src/layouts/senderId-management",
+        store: {
+          title: "Sender Id Management",
+          scripts: [
+            "../js/vendor-all.min.js",// new
+            "../js/bootstrap.min.js",// new js
+            "../js/pcoded.min.js", // new
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            // "../js/autocomplete.min.js",
+            "../../datatable/js/jquery.dataTables.min.js",
+            "../../datatable/js/dataTables.bootstrap4.min.js",
+            "../../datatable/js/dataTables.responsive.min.js",
+            "../../datepicker/js/datetimepicker.js",
+            "../js/senderId-management.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../../datatable/css/dataTables.bootstrap4.min.css",
+            "../../datatable/css/responsive.bootstrap4.min.css",
+            "../font-awesome/css/font-awesome.min.css",
+            "../../datepicker/css/jquery-ui.css",
+            "../../datepicker/css/datetimepicker.css", "../css/jquery.steps.css"],
+          seidMgmt: true
+        }
+      },
+      {
+        name: "ssmpSessionMgmt",
+        entypoint: "./src/layouts/ssmp-session-mgmt",
+        store: {
+          title: "SSMP Session Management",
+          scripts: [
+            "../js/vendor-all.min.js",// new
+            "../js/bootstrap.min.js",// new js
+            "../js/pcoded.min.js", // new
+            "../js/boot_typeahead.js",
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../../datatable/js/jquery.dataTables.min.js",
+            "../../datatable/js/dataTables.bootstrap4.min.js",
+            "../../datatable/js/dataTables.responsive.min.js",
+            "../js/ssmpSessionMgmt.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../../datatable/css/dataTables.bootstrap4.min.css",
+            "../../datatable/css/responsive.bootstrap4.min.css",
+            "../font-awesome/css/font-awesome.min.css",
+            "../css/datetimepicker.css", "../css/jquery.steps.css"],
+          listUser: true
+        }
+      },
+      {
+        name: "smscMgmt",
+        entypoint: "./src/layouts/smsc-mgmt",
+        store: {
+          title: "SMSC Management",
+          scripts: [
+            "../js/vendor-all.min.js",// new
+            "../js/bootstrap.min.js",// new js
+            "../js/pcoded.min.js", // new
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../js/autocomplete.min.js",
+            "../js/jquery.steps.min.js",
+            "../../datepicker/js/datetimepicker.js",
+            "../js/smscMgmt.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../font-awesome/css/font-awesome.min.css",
+            "../css/jquery.steps.css",
+            "../../datepicker/css/jquery-ui.css",
+            "../../datepicker/css/datetimepicker.css", "../css/jquery.steps.css"],
+          smscMgmt: true
+        }
+      },
+      {
+        name: "operatorSummary",
+        entypoint: "./src/layouts/operator-summary",
+        store: {
+          title: "Operator Summary",
+          scripts: [
+            "../js/vendor-all.min.js",// new
+            "../js/bootstrap.min.js",// new js
+            "../js/pcoded.min.js", // new
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../js/autocomplete.min.js",
+            "../../datatable/js/jquery.dataTables.min.js",
+            "../../datatable/js/dataTables.bootstrap4.min.js",
+            "../../datatable/js/dataTables.responsive.min.js",
+            "../../datepicker/js/datetimepicker.js",
+            "../js/operatorSummary.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../../datatable/css/dataTables.bootstrap4.min.css",
+            "../../datatable/css/responsive.bootstrap4.min.css",
+            "../font-awesome/css/font-awesome.min.css",
+            "../../datepicker/css/jquery-ui.css",
+            "../../datepicker/css/datetimepicker.css", "../css/jquery.steps.css"],
+          orderSummary: true
+        }
+      },
+      {
+        name: "user-profile",
+        entypoint: "./src/layouts/user-profile",
+        store: {
+          title: "User Profile",
+          scripts: [
+            "../js/vendor-all.min.js",
+            "../js/bootstrap.min.js",
+            "../js/pcoded.min.js",
+            "../js/boot_typeahead.js",
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../../datatable/js/jquery.dataTables.min.js",
+            "../../datatable/js/dataTables.bootstrap4.min.js",
+            "../../datatable/js/dataTables.responsive.min.js",
+            "../js/user-profile.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../font-awesome/css/font-awesome.min.css",
+            "../../datepicker/css/jquery-ui.css",
+            "../../datepicker/css/datetimepicker.css", "../css/jquery.steps.css"
+          ]
+        }
+      },
+      {
+      name: "downloadReport",
+        entypoint: "./src/layouts/downloadReport",
+        store: {
+          title: "Download Report",
+          scripts: [
+            "../js/vendor-all.min.js",// new
+            "../js/bootstrap.min.js",// new js
+            "../js/pcoded.min.js", // new
+            // "../js/boot_typeahead.js",
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../../datatable/js/jquery.dataTables.min.js",
+            "../../datatable/js/dataTables.bootstrap4.min.js",
+            "../../datatable/js/dataTables.responsive.min.js",
+            "../../datepicker/js/jquery-ui.js",
+            "../../datepicker/js/datetimepicker.js",
+            "../js/downloadReport.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../../datatable/css/dataTables.bootstrap4.min.css",
+            "../../datatable/css/responsive.bootstrap4.min.css",
+            "../font-awesome/css/font-awesome.min.css",
+            "../../datepicker/css/jquery-ui.css",
+            "../../datepicker/css/datetimepicker.css", "../css/jquery.steps.css"],
+
+        }
+      },
+      {
+        name: "error-code",
+        entypoint: "./src/layouts/error-code",
+        store: {
+          title: "Error Code",
+          scripts: [
+            "../js/vendor-all.min.js",
+            "../js/bootstrap.min.js",
+            "../js/pcoded.min.js",
+            "../js/vendor.js",
+            "../js/common.js",
+            "../js/moment.js",
+            "../../datatable/js/jquery.dataTables.min.js",
+            "../../datatable/js/dataTables.bootstrap4.min.js",
+            "../../datatable/js/dataTables.responsive.min.js",
+            "../js/error-code.js"
+          ],
+          styles: ["../css/bootstrap.min.css", "../css/theme.css", "../css/new_style.css",
+            "../../datatable/css/dataTables.bootstrap4.min.css",
+            "../../datatable/css/responsive.bootstrap4.min.css",
+            "../font-awesome/css/font-awesome.min.css",
+            "../css/datetimepicker.css", "../css/jquery.steps.css"],
+        }
+      }
+    ];
+  }
+
+  getPageList() {
+    return this.pages;
+  }
+
+  getStore(pageName) {
+    return _.find(this.getPageList(), { name: pageName }).store;
+  }
+
+  getWebPackEntry() {
+    let webPackEntry = {};
+    this.getPageList().forEach(page => {
+      webPackEntry[page.name] = page.entypoint;
+    });
+    return webPackEntry;
+  }
+}
+
+module.exports = new PageConfig();

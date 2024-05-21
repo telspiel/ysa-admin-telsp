@@ -1,0 +1,64 @@
+.tree {
+  margin:0;
+  padding:0;
+  list-style:none;
+  width:fit-content;
+}
+
+.tree li {
+  margin:0;
+  padding:0 1em;
+  line-height:3em;
+  color:#336699;
+  font-weight:700;
+  position:relative
+}
+
+.indicator {
+  margin-right:5px;
+}
+.tree li a {
+  text-decoration: none;
+  color:#336699;
+  font-size: large;
+}
+.tree ul li a{
+  font-size: medium;
+  color: #369;
+}
+
+.tree li table{
+  margin-left: 1em;
+  position: relative;
+}
+
+.tree li table:before {
+  content: "";
+  display: block;
+  width: 0;
+  position: absolute;
+  top: 0;
+  bottom: 20px;
+  left: 0;
+  border-left: 1px solid;
+}
+
+.tree li table tr:before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 0;
+  border-top: 1px solid;
+  margin-top: 23px;
+  top: 1.5em;
+  left: 0;
+}
+
+.keranlName{
+  padding-left: 8px;
+}
+
+.keranlIcon{
+  width: 50px;
+  text-align: center;
+}

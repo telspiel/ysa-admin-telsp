@@ -1,0 +1,513 @@
+{{> sideNav this }}
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+  <div class="pcoded-content">
+    <!-- [ Main Content ] start -->
+    <div class="p-0">
+      <div class="p-0 contant-holder">
+        <!-- contant holder start -->
+        <h3 class="main-head-3">User Management</h3>
+        <!-- contant holder end -->
+        <div class="col-md-12 pt-2 pb-5">
+          <main class="px-4 py-3">
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="add-user-tab" data-toggle="tab" href="#add" role="tab"
+                  aria-controls="add" aria-selected="true">Add</a>
+                <a class="nav-item nav-link" id="view-user-tab" data-toggle="tab" href="#view" role="tab"
+                  aria-controls="view" aria-selected="false">View</a>
+                <a class="nav-item nav-link" id="edit-user-tab" data-toggle="tab" href="#edit" role="tab"
+                  aria-controls="edit" aria-selected="false">Edit</a>
+              </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="add" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div id="add-user-form" class="user-form">
+
+                  <form id="add-user" action="#">
+                    <div>
+                      <h3>User Account</h3>
+                      <section>
+                        <div class="row">
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="username" class="col-form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" value=""
+                              placeholder="Username">
+                          </div>
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="userPassword" class="col-form-label">Password</label>
+                            <input type="password" class="form-control" id="userPassword" name="userPassword" value=""
+                              placeholder="Password">
+                          </div>
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="userRole" class="col-form-label">User Role</label>
+                            <select class="custom-select" id="userRole" name="role" title="User Role">
+                              <option value="customer">Customer</option>
+                              <option value="support">Support</option>
+                              <option value="admin">Admin</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="customerType" class="col-form-label">Customer Type</label>
+                            <select class="custom-select" id="customerType" name="customerType" title="Customer Type">
+                              <option value="reseller">Reseller</option>
+                              <option value="seller">Seller</option>
+                              <option value="client">Client</option>
+                              <option value="internal">Internal</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="row">
+
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="accountType" class="col-form-label">Account Type</label>
+                            <select class="custom-select" id="accountType" name="accountType" title="Account Type">
+                              <option value="transactional">Transactional</option>
+                              <option value="promotional">Promotional</option>
+                              <option value="transPromo">TransPromo</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="billingType" class="col-form-label">Billing Type</label>
+                            <select class="custom-select" id="billingType" name="billingType" title="Billing Type">
+                              <option value="prepaid">PREPAID</option>
+                              <option value="postpaid">POSTPAID</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="billingCycle" class="col-form-label">Billing Cycle</label>
+                            <select class="custom-select" id="billingCycle" name="billingCycle" title="Billing Cycle">
+                              <option value="monthly">Monthly</option>
+                              <option value="quaterly">Quaterly</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="messageType" class=" col-form-label">Message Type</label>
+                            <select class="custom-select" id="messageType" name="messageType" title="Message Type">
+                              <option value="Plain Text">Plain Text</option>
+                              <option value="binary">Binary</option>
+                              <option value="flash">Flash</option>
+                              <option value="unicode">Unicode</option>
+                              <option value="international">International</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="row">
+
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="senderIdType" class="col-form-label">Sender Id Type</label>
+                            <select class="custom-select" id="senderIdType" name="senderIdType" title="Sender Id Type">
+                              <option value="static">Static</option>
+                              <option value="dynamic">Dynamic</option>
+                              <option value="open">Open</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="dlrMediumType" class="col-form-label">DLR Type</label>
+                            <select class="custom-select" id="dlrMediumType" name="dlrMediumType" title="DLR Type">
+                              <option value="push">PUSH</option>
+                              <option value="pull">PULL</option>
+                              <option value="url">URL</option>
+                              <option value="smmp">SMMP</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="priority" class=" col-form-label">Priority</label>
+                            <select class="custom-select" id="priority" name="priority" title="Priority">
+                              <option value="high">High</option>
+                              <option value="medium">Medium</option>
+                              <option value="low">Low</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="userAccountType" class=" col-form-label">User Account Type</label>
+                            <select class="custom-select" id="userAccountType" name="userAccountType"
+                              title="userAccountType">
+                              <option value="SMPP">SMPP</option>
+                              <option value="WEB">WEB</option>
+                              <option value="API">API</option>
+                            </select>
+                          </div>
+
+                        </div>
+
+                        <div class="row">
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="expiry" class=" col-form-label">Expiry Date</label>
+                            <input type="date" class="form-control" id="expiry" name="userExpiryDate" value=""
+                              placeholder="Expiry">
+                          </div>
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="expiryTime" class=" col-form-label">Expiry Time</label>
+                            <input type="time" class="form-control" id="expiryTime" name="userExpiryDate" title="Expiry"
+                              placeholder="Expiry Time" step="2" required="">
+                          </div>
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="isVisualizeAllowed" class="col-form-label">Is Visualize Allowed</label>
+                            <select class="custom-select" id="isVisualizeAllowed" name="isVisualizeAllowed"
+                              title="isVisualizeAllowed">
+                              <option value="Y">Yes</option>
+                              <option value="N">No</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group col-md-3 col-sm-6">
+                            <label for="status" class="col-form-label">Status</label>
+                            <select class="custom-select" id="status" name="status" title="Status">
+                              <option value="active">Active</option>
+                              <option value="inactive">Inactive</option>
+                            </select>
+                          </div>
+                        </div>
+                      </section>
+                      <h3>User Profile</h3>
+                      <section>
+
+                        <div class="row">
+                          <div class="form-group col-md-4 col-sm-6">
+                            <label for="userName" class="col-form-label">User Name</label>
+                            <input type="text" class="form-control" id="userName" name="userName" value=""
+                              placeholder="User Name">
+                          </div>
+
+                          <div class="form-group col-md-4 col-sm-6">
+                            <label for="orgName" class="col-form-label">Organisation</label>
+                            <input type="text" class="form-control typeahead" data-provide="typeahead" id="orgName"
+                              name="orgName" value="" placeholder="Organisation">
+                          </div>
+
+                          <div class="form-group col-md-4 col-sm-6">
+                            <label for="deptName" class="col-form-label">Department</label>
+                            <input type="text" class="form-control typeahead" data-provide="typeahead" id="deptName"
+                              name="deptName" value="" placeholder="Department">
+                          </div>
+
+                        </div>
+
+                        <div class="row">
+                          <div class="form-group col-md-4 col-sm-6">
+                            <label for="email" class="col-form-label">Email ID</label>
+                            <input type="text" class="form-control" id="email" name="email" value=""
+                              placeholder="Email Id">
+                          </div>
+
+                          <div class="form-group col-md-4 col-sm-6">
+                            <label for="mobileNumber" class="col-form-label">Mobile Number</label>
+                            <input type="text" class="form-control" id="mobileNumber" name="mobileNumber" value=""
+                              placeholder="Mobile Number">
+                          </div>
+
+                          <div class="form-group col-md-4 col-sm-6">
+                            <label for="status" class="col-form-label">Status</label>
+                            <select class="custom-select" id="status" name="status" title="Status">
+                              <option value="active">Active</option>
+                              <option value="inactive">Inactive</option>
+                            </select>
+                          </div>
+
+                        </div>
+                      </section>
+                      <h3>Other</h3>
+                      <section>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                              <label for="expressAllowed-0" class="col-sm-4 col-form-label">Express Allowed</label>
+                              <div class="col-sm-8">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isExpressAllowed" value="Y"
+                                    id="expressAllowed-0" title="Express Allowed" checked="checked"> <label
+                                    class="form-check-label" for="expressAllowed-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isExpressAllowed" value="N"
+                                    id="expressAllowed-1" title="Express Allowed"> <label class="form-check-label"
+                                    for="expressAllowed-1">No</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="dndCheck-0" class="col-sm-4 col-form-label">DND Check</label>
+                              <div class="col-sm-8">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isDndCheck" value="Y"
+                                    id="dndCheck-0" title="DND Check" checked="checked"> <label class="form-check-label"
+                                    for="dndCheck-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isDndCheck" value="N"
+                                    id="dndCheck-1" title="DND Check"> <label class="form-check-label"
+                                    for="dndCheck-1">No</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="guiAccess-0" class="col-sm-4 col-form-label">GUI Access</label>
+                              <div class="col-sm-8">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isGuiAccess" value="Y"
+                                    id="guiAccess-0" title="GUI Access" checked="checked"> <label
+                                    class="form-check-label" for="guiAccess-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isGuiAccess" value="N"
+                                    id="guiAccess-1" title="GUI Access"> <label class="form-check-label"
+                                    for="guiAccess-1">No</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="httpAllowed-0" class="col-sm-4 col-form-label">HTTP Allowed</label>
+                              <div class="col-sm-8">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isHttpAllowed" value="Y"
+                                    id="httpAllowed-0" title="HTTP Allowed" checked="checked"> <label
+                                    class="form-check-label" for="httpAllowed-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isHttpAllowed" value="N"
+                                    id="httpAllowed-1" title="HTTP Allowed"> <label class="form-check-label"
+                                    for="httpAllowed-1">No</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="httpsAllowed-0" class="col-sm-4 col-form-label">HTTPS Allowed</label>
+                              <div class="col-sm-8">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isHttpsAllowed" value="Y"
+                                    id="httpsAllowed-0" title="HTTPS Allowed" checked="checked"> <label
+                                    class="form-check-label" for="httpsAllowed-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isHttpsAllowed" value="N"
+                                    id="httpsAllowed-1" title="HTTPS Allowed"> <label class="form-check-label"
+                                    for="httpsAllowed-1">No</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="blockout-0" class="col-sm-4 col-form-label">Blockout</label>
+                              <div class="col-sm-8">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isBlockout" value="Y"
+                                    id="blockout-0" title="Blockout" checked="checked"> <label class="form-check-label"
+                                    for="blockout-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isBlockout" value="N"
+                                    id="blockout-1" title="Blockout"> <label class="form-check-label"
+                                    for="blockout-1">No</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="messageFilter-0" class="col-sm-4 col-form-label">Message Filter</label>
+                              <div class="col-sm-8">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isMessageFilter" value="Y"
+                                    id="messageFilter-0" title="Message Filter" checked="checked"> <label
+                                    class="form-check-label" for="messageFilter-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isMessageFilter" value="N"
+                                    id="messageFilter-1" title="Message Filter"> <label class="form-check-label"
+                                    for="messageFilter-1">No</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+
+                            <div class="form-group row">
+                              <label for="duplicateFilter-0" class="col-sm-6 col-form-label">DLR Allowed</label>
+                              <div class="col-sm-6">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isDlrAllowed" value="Y"
+                                    id="isDlrAllowed-0" title="Duplicate Filter" checked="checked"> <label
+                                    class="form-check-label" for="duplicateFilter-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isDlrAllowed" value="N"
+                                    id="isDlrAllowed-1" title="Duplicate Filter"> <label class="form-check-label"
+                                    for="duplicateFilter-1">No</label>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="form-group row">
+                              <label for="duplicateFilter-0" class="col-sm-6 col-form-label">Duplicate Allowed</label>
+                              <div class="col-sm-6">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isDuplicateAllowed" value="Y"
+                                    id="duplicateFilter-0" title="Duplicate Filter" checked="checked"> <label
+                                    class="form-check-label" for="duplicateFilter-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isDuplicateAllowed" value="N"
+                                    id="duplicateFilter-1" title="Duplicate Filter"> <label class="form-check-label"
+                                    for="duplicateFilter-1">No</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="blacklistAllowed-0" class="col-sm-6 col-form-label">Blacklist Allowed</label>
+                              <div class="col-sm-6">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isBlacklistAllowed" value="Y"
+                                    id="blacklistAllowed-0" title="Blacklist Allowed" checked="checked"> <label
+                                    class="form-check-label" for="blacklistAllowed-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isBlacklistAllowed" value="N"
+                                    id="blacklistAllowed-1" title="Blacklist Allowed"> <label class="form-check-label"
+                                    for="blacklistAllowed-1">No</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="timeAdjust-0" class="col-sm-6 col-form-label">Time Adjust</label>
+                              <div class="col-sm-6">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isTimeAdjust" value="Y"
+                                    id="timeAdjust-0" title="Time Adjust" checked="checked"> <label
+                                    class="form-check-label" for="timeAdjust-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isTimeAdjust" value="N"
+                                    id="timeAdjust-1" title="Time Adjust"> <label class="form-check-label"
+                                    for="timeAdjust-1">No</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="otpAllowed-0" class="col-sm-6 col-form-label">OTP Allowed</label>
+                              <div class="col-sm-6">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isOtpAllowed" value="Y"
+                                    id="otpAllowed-0" title="OTP Allowed" checked="checked"> <label
+                                    class="form-check-label" for="otpAllowed-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isOtpAllowed" value="N"
+                                    id="otpAllowed-1" title="OTP Allowed"> <label class="form-check-label"
+                                    for="otpAllowed-1">No</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="bulkUploadAllowed-0" class="col-sm-6 col-form-label">Bulk Upload
+                                Allowed</label>
+                              <div class="col-sm-6">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isBulkUploadAllowed" value="Y"
+                                    id="bulkUploadAllowed-0" title="Bulk Upload Allowed" checked="checked"> <label
+                                    class="form-check-label" for="bulkUploadAllowed-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isBulkUploadAllowed" value="N"
+                                    id="bulkUploadAllowed-1" title="Bulk Upload Allowed"> <label
+                                    class="form-check-label" for="bulkUploadAllowed-1">No</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="smppAllowed-0" class="col-sm-6 col-form-label">SMPP Allowed</label>
+                              <div class="col-sm-6">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isSmppAllowed" value="Y"
+                                    id="smppAllowed-0" title="SMPP Allowed" checked="checked"> <label
+                                    class="form-check-label" for="smppAllowed-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isSmppAllowed" value="N"
+                                    id="smppAllowed-1" title="SMPP Allowed"> <label class="form-check-label"
+                                    for="smppAllowed-1">No</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="intMsgAllowed-0" class="col-sm-6 col-form-label">International Msg
+                                Allowed</label>
+                              <div class="col-sm-6">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isInternationalAllowed" value="Y"
+                                    id="intMsgAllowed-0" title="International Msg Allowed" checked="checked"> <label
+                                    class="form-check-label" for="intMsgAllowed-0">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="isInternationalAllowed" value="N"
+                                    id="intMsgAllowed-1" title="International Msg Allowed"> <label
+                                    class="form-check-label" for="intMsgAllowed-1">No</label>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                          <div class="form-group col-md-4">
+                            <label for="abusingWordsCount" class="col-form-label">Abusive Words Count</label>
+                            <input type="text" class="form-control" id="abusingWordsCount" name="abusingWordsCount"
+                              title="Abusive Words Count" placeholder="Abusive Words Count" required="">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="maxDlrRetryCount" class="col-form-label">Max DLR Retry Count</label>
+                            <input type="text" class="form-control" id="maxDlrRetryCount" name="maxDlrRetryCount"
+                              title="Max DLR Retry Count" placeholder="Max DLR Retry Count" required="">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="dlrPushUrl" class="col-form-label">DLR Push URL</label>
+                            <input type="text" class="form-control" id="dlrPushUrl" name="dlrPushUrl"
+                              title="DLR Push URL" placeholder="DLR Push URL" required="">
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="view" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div id="view-user-form" class="user-form"></div>
+              </div>
+              <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div id="edit-user-form" class="user-form"></div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-div">
+    <span class="copy float-left">
+      <p id="demo"></p> &copy; All Rights Reserved
+    </span>
+    <span class="float-right">
+      <ul class="social-media-icon">
+        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+      </ul>
+    </span>
+  </div>
+</div>
