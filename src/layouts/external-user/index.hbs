@@ -233,6 +233,22 @@
                               placeholder="Expiry">
                           </div>
 
+                           <div class="form-group col-md-3 col-sm-6 serviceType">
+                            <label for="serviceType" class="col-form-label">Service Type</label>
+                            <select class="custom-select" id="serviceType" name="serviceType" title="ServiceType">
+                              <option value="airtelGovt">airtel-govt</option>
+                              <option value="premium">premium</option>
+                              <option value="airtel">airtel</option>
+                              <option value="mix">mix</option>
+                              <option value="bsnl">bsnl</option>
+                              <option value="sim">sim</option>
+                              <option value="airtelPsu">airtel-psu</option>
+                              <option value="ildo">ildo</option>
+                              <option value="demo">demo</option>
+                              <option value="videocon">videocon</option>
+                            </select>
+                          </div>
+
       
                           {{!-- <div class="form-group col-md-3 col-sm-6">
                             <label for="rejectFailedNumber" class="col-form-label">Reject Failed Number</label>
@@ -286,6 +302,7 @@
                               <select class="form-control select2 accountManagerName" id="accountManagerName" name="accountManagerName">
                             </select>
                           </div>
+
 
                         </div>
                       </section>
@@ -474,21 +491,17 @@
                                   id="lowCreditAlertLimit" name="lowCreditAlertLimit" placeholder="Credit Limit"
                                   required pattern="\d{10}" disabled>
                               </div>
-                              {{!-- <div class="blah col-md-6">
-                                <label class="col-form-label col-sm-6">Blah</label>
-                                <input style="display: inline-block;" type="text" class="form-control col-sm-3"
-                                  id="blah" name="blah" placeholder="Blah"
-                                  required pattern="\d{10}" disabled>
-                              </div> --}}
-                              <div class="creditAlertMode col-md-6">
-                                <label class="col-form-label col-sm-6">Credit Alert Mode</label>
-                                <select style="display: inline-block;" class="form-control col-sm-3" id="creditAlertMode" name="creditAlertMode" required disabled>
-                                    {{!-- <option value="">Select Option</option> --}}
+
+                              <div class="isIntlAllowed col-md-6">
+                                <label class="col-form-label col-sm-6">Is International Allowed</label>
+                                <select style="display: inline-block;" class="form-control col-sm-3" id="isIntlAllowed" name="isIntlAllowed" required disabled>
+                                    <option value="N">Not Applicable</option>
                                     <option value="sms">SMS</option>
                                     <option value="email">Email</option>
                                     <option value="both">Both</option>
                                 </select>
                             </div>
+
                             </div>
                           </div>
                         </div>

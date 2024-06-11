@@ -561,6 +561,57 @@ const Schema = {
       readonly: true,
     },
     // {
+    //   label: "Service Type",
+    //   type: "select",
+    //   id: "serviceType",
+    //   name: "serviceType",
+    //   title: "Service Type",
+    //   selected: "selected",
+    //   options: [
+    //     {
+    //       label: "airtel-govt",
+    //       value: "airtelGovt",
+    //     },
+    //     {
+    //       label: "premium",
+    //       value: "premium",
+    //     },
+    //     {
+    //       label: "airtel",
+    //       value: "airtel",
+    //     },
+    //     {
+    //       label: "mix",
+    //       value: "mix",
+    //     },
+    //     {
+    //       label: "bsnl",
+    //       value: "bsnl",
+    //     },
+    //     {
+    //       label: "sim",
+    //       value: "sim",
+    //     },
+    //     {
+    //       label: "airtel-psu",
+    //       value: "airtelPsu",
+    //     },
+    //     {
+    //       label: "ildo",
+    //       value: "ildo",
+    //     },
+    //     {
+    //       label: "demo",
+    //       value: "demo",
+    //     },
+    //     {
+    //       label: "videocon",
+    //       value: "videocon",
+    //     },
+    //   ],
+    // },
+    
+    // {
     //   label: "Reject Failed Number",
     //   type: "select",
     //   id: "rejectFailedNumber",
@@ -853,28 +904,31 @@ const Schema = {
       id: "lowCreditAlertLimit",
       name: "lowCreditAlertLimit",
       title: "Notify if credit value reaches",
-      disabled: true,
+      // display: none,
     },
     {
-      label: "Credit Alert Mode",
+      label: "Is International Allowed",
       type: "select",
-      id: "creditAlertMode",
-      name: "creditAlertMode",
-      title: "Credit Alert Mode",
+      id: "isIntlAllowed",
+      name: "isIntlAllowed",
+      title: "Is International Allowed",
       selected: "selected",
-      // readonly: false,
       options: [
         {
+          label: "Not Applicable",
+          value: "N",
+        },
+        {
           label: "SMS",
-          value: "sms",
+          value: "Sms",
         },
         {
           label: "Email",
-          value: "email",
+          value: "Email",
         },
         {
           label: "Both",
-          value: "both",
+          value: "Both",
         },
       ],
     },

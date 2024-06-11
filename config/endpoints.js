@@ -65,7 +65,14 @@ class Endpoints {
       viewRoutingForAllUserByGroupName: "reseller/viewRoutingForAllUserByGroupName",
       updateGroupRoutingDetailsForAllUser:"reseller/updateGroupRoutingDetailsForAllUser",
       uploadErrorCodeFile:"errorCodesService/uploadErrorCodeFile",
-      addNewErrorCode:"errorCodesService/addNewErrorCode"
+      addNewErrorCode:"errorCodesService/addNewErrorCode",
+
+      creditAlertNotification: "creditNotification",
+      
+      addBlacklistNumber: "addSingleNumber",
+      searchMobileNumber: "getGlobalBlackListMobileNumber",
+      deleteBlacklistNumber: "deleteNumberInDb",
+      uploadBlacklistNumber: "uploadFile",
     };
   }
 

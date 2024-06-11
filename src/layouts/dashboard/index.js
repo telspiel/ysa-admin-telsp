@@ -8,7 +8,7 @@ import User from "./../../scripts/user";
 import Endpoints from "./../../../config/endpoints";
 import Alert from "./../../scripts/alert";
 
-// console.log("Welcome to dashboard!");
+console.log("Welcome to dashboard!");
 
 // new Form(Schema).render("#add-organization-form");
 
@@ -189,6 +189,64 @@ Request(Endpoints.get("getHourlyReport"), "POST", {
 
   }
 });
+// Arnav Changes for notification alert start 27-05-2024---------------------------------------
+
+const bearerToken = User.getJWTToken()
+console.log(bearerToken);
+
+const userName = User.getName();
+console.log(userName);
+const url = `${Endpoints.get("creditAlertNotification")}?userName=${encodeURIComponent(userName)}`;
+// Make the Fetch request
+fetch(url, {
+  method: 'GET', // or 'POST' if the endpoint expects a POST request
+  headers: {
+    'Authorization': bearerToken,
+    'Content-Type': 'application/json' // Ensure the correct content type if necessary
+  }
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json(); // Parse the response JSON
+  })
+  .then(data => {
+    console.log(data);
+    const messageCountElement = document.getElementById('messageCount');
+    if (data && data.length > 0) {
+      const messageCount = data.length; //set the notification count equals to the length of response
+
+      //if notification count is more than 0, bg color of badge will be green
+      messageCountElement.textContent = messageCount;
+      messageCountElement.style.backgroundColor = 'red';
+    } else {
+      //if notification count is 0, bg color of badge will be red
+      messageCountElement.textContent = 0;
+      messageCountElement.style.backgroundColor = 'grey';
+    }
+
+    const tableBody = document.querySelector('#notificationModal .table-content tbody');
+    tableBody.innerHTML = ''; // Clear existing content
+
+    data.forEach(item => {
+      const row = document.createElement('tr');
+      const userNameCell = document.createElement('td');
+      const availableCreditCell = document.createElement('td');
+
+      userNameCell.textContent = item.userName;
+      availableCreditCell.textContent = item.availableCredit;
+
+      row.appendChild(userNameCell);
+      row.appendChild(availableCreditCell);
+      tableBody.appendChild(row);
+    });
+  })
+  .catch(error => {
+    console.error('There was a problem with the Fetch operation:', error);
+  });
+ 
+// Arnav Changes for notification alert end--------------------------------------------------
 
 var d = new Date();
 var day = d.getDate();

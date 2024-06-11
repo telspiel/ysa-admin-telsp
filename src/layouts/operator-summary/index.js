@@ -10,7 +10,7 @@ import Alert from "./../../scripts/alert";
 import Cookie from "./../../scripts/cookie";
 const table = require("./../../partials/table.hbs");
 
-// ("Welcome to senderId management!");
+console.log("Welcome to Operator Summary");
 
 // new Form(Schema).render("#add-senderId-form");
 

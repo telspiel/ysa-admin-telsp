@@ -8,7 +8,8 @@ import User from "./../../scripts/user";
 import Endpoints from "./../../../config/endpoints";
 import Alert from "./../../scripts/alert";
 
-// console.log("Welcome to organization management!");
+console.log("Welcome to organization management!");
+console.log("Welcome to organization");
 
 $(document).ready(function () {
   $('.select2').select2();

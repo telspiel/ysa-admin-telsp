@@ -3410,6 +3410,7 @@ input[type="button"].btn-block {
     -webkit-box-align: stretch;
     align-items: stretch;
     width: 100%;
+    height: 37px !important;
 }
 
 .input-group > .form-control,
@@ -15171,6 +15172,14 @@ a.text-dark:hover, a.text-dark:focus {
     content: "\f248";
 }
 
+.fa-list-ul:before {
+    content: "\f0ca"; /* Unicode character for list icon */
+}
+
+.fa-no-entry:before {
+    content: "\f05e"; /* Unicode for no entry (ban) icon */
+}
+
 .fa-odnoklassniki:before {
     content: "\f263";
 }
@@ -20399,6 +20408,7 @@ pre[class*=language-]:before {
 
 .pcoded-header .navbar-nav > li:last-child {
     padding-right: 25px;
+    width: 100%;
 }
 
 .pcoded-header .mr-auto .dropdown-menu {
@@ -20407,6 +20417,10 @@ pre[class*=language-]:before {
 
 .pcoded-header .ml-auto {
     float: right;
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .pcoded-header .ml-auto .dropdown-menu {
@@ -26052,4 +26066,184 @@ ul.social-media-icon {
 }
 ul.social-media-icon li a:hover {
     color: #333;
+}
+
+
+
+/* -----------------------------------22-05-2024 Notification ALert changes------------------------------ */
+.notification-icon {
+    float: left;
+    cursor: pointer;
+  }
+  
+  .user-info {
+    float: right;
+  }
+
+  @keyframes bell-animation {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(-20deg); }
+    40% { transform: rotate(20deg); }
+    60% { transform: rotate(-20deg); }
+    80% { transform: rotate(20deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  .fa-bell:active {
+    /* color: green; */
+    animation: bell-animation 0.3s ease;
+    font-size: 32px; /* Increased size on click */
+    transform: scale(1.5); /* Additional size increase with smooth transition */
+  }
+
+
+  .notification-icon {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* .badge {
+    position: absolute;
+    top: 4px;
+    right: 2px;
+    padding: 5px 6px;
+    border-radius: 50%;
+    background-color: red;
+    color: white !important;
+    font-weight: bold;
+  }  */
+
+  /* In Dashboard Page */
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(2);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -5px;
+    font-size: 15px;
+    padding: 5px 6px;
+    border-radius: 50%;
+    background-color: red;
+    color: white !important;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards; 
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .notification-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    margin-top: 80px;
+  }
+
+  .popUp-head {
+    display: flex;
+    justify-content: space-between;
+  }
+  .popUp-head h2 {
+    font-size: 22px;
+  }
+
+  /* Show the modal when the :target pseudo-class is active */
+  #notificationModal:target {
+    display: block;
+    overflow: hidden;
+    z-index: 1000;
+  }
+
+
+  .table-content {
+    max-height: 350px; /* Set the desired max height */
+    overflow-y: auto;
+    scrollbar-width: thin; /* Makes the scrollbar thin */
+    scrollbar-color: #888 #f1f1f1;
+  }
+
+  .table-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  .table-content table, th, td {
+    border: 1px solid #ddd;
+  }
+
+  /* .table-content th, .table-content td {
+    width: 50%;
+  } */
+
+   /* In Dashboard Page */
+  .table-content th, .table-content td {
+    width: 50%;
+    padding: 10px;
+  }
+
+  .table-content th, td {
+    padding: 8px;
+    text-align: center;
+    color: #000;
+    padding: 0;
+  }
+
+  /* .table-content th {
+    background-color: #6610f2;
+    text-align: center;
+    color: #fff;
+    padding: 0;
+  } */
+
+  /* In Dashboard Page */
+  .table-content th {
+    background-color: #6610f2;
+    text-align: center;
+    color: #fff;
+    padding: 8px;
+  }
+
+  .table-content tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light grey color for even rows */
+  }
+
+  @media (max-width: 800px) {
+    .notification-modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 60%;
+        top: -70px;
+      } 
+}
+
+@media (max-width: 400px) {
+    .notification-modal-content {
+        width: 80%;
+      } 
 }

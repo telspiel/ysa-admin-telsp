@@ -1860,9 +1860,15 @@
 }
 .fa-object-group:before {
   content: "\f247";
-}
+} 
 .fa-object-ungroup:before {
   content: "\f248";
+}
+.fa-list-ul:before {
+  content: "\f0ca"; /* Unicode character for list icon */
+}
+.fa-no-entry:before {
+  content: "\f05e"; /* Unicode for no entry (ban) icon */
 }
 .fa-sticky-note:before {
   content: "\f249";

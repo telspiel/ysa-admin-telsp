@@ -127,11 +127,13 @@ $(document).ready(function () {
           (data.result === "Success"
             ? Alert.success(data.message)
             : Alert.error(data.message));
+
         if (data.result === "Failure") {
           $(".actions.clearfix");
           // $(".actions.clearfix").css("display", "none");
         }
         if (data.result === "Success") {
+          console.log("UserSaved");
           $(".actions.clearfix").css("display", "block");
         }
       });
@@ -320,6 +322,7 @@ function editUSerSubmit() {
       $.extend({}, formData, additionalData)
     ).done((data) => {
       if (Endpoints.validateResponse(data)) {
+        console.log("This is it");
         $(".alert").alert("close");
 
         // console.log(data);
@@ -387,6 +390,8 @@ function dropdownChange(containerID, value, key, formId, disable) {
 
     //Freeze billingType field in edit section
     $("#edit #billingType").addClass("make-it-freeze");
+
+    // $("#edit #serviceType").addClass("make-it-freeze");
 
     $("#edit #editAccountType").prop("disabled", "disabled");
 
@@ -500,9 +505,9 @@ function initRadioSelection(containerID) {
     containerID + " #isLowCreditAlert-0," + containerID + " #isLowCreditAlert-1"
   ).click(function () {
     if ($(this).val() == "Yes") {
-      $("#creditAlertMode").prop("disabled", false);
+      $("#isIntlAllowed").prop("disabled", false);
     } else {
-      $("#creditAlertMode").prop("disabled", true);
+      $("#isIntlAllowed").prop("disabled", true);
     }
   });
 
@@ -792,3 +797,12 @@ $("#edit-user-tab").click(() => {
   $("#view-user-form").html("");
   loadAllUserTypes();
 });
+
+
+//----------Arnav Code 06-06-2024----------------
+//when loggedin userrole is reseller, hide serviceType field in Add User Section
+const userRole = User.getRole()
+ 
+if (userRole === "reseller" || userRole === "seller") {
+  $(".serviceType").addClass("d-none");
+}

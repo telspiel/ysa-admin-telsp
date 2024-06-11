@@ -1,0 +1,147 @@
+{{> sideNav this }}
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+  <div class="pcoded-content">
+    <!-- [ Main Content ] start -->
+    <div class="p-0">
+       <div id="responseMessage" style="display: none; color: white; padding: 10px; margin-bottom: 10px; border-radius: 10px;"></div>
+       <div id="deleteResponseMessage" style="display: none; background-color: #d5f7f0; color: #18705f; padding: 10px; margin-bottom: 10px; border-radius: 10px;"></div>
+       <div id="uploadResponseMessage" style="display: none; padding: 10px; margin-bottom: 10px; border-radius: 10px; font-weight: 700"></div>
+
+      <div class="p-0 contant-holder">
+        <!-- contant holder start -->
+
+        <h3 class="main-head-3">Global Blacklist</h3>
+        <!-- contant holder end -->
+        <div class="col-md-12 pt-2 pb-5">
+          <main class="px-4 py-3">
+            <div id="alert-box" class="alert-box"></div>
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="add-organization-tab" data-toggle="tab" href="#add" role="tab"
+                  aria-controls="add" aria-selected="true">Add</a>
+                <a class="nav-item nav-link" id="view-organization-tab" data-toggle="tab" href="#view" role="tab"
+                  aria-controls="view" aria-selected="false">Upload</a>
+                <a class="nav-item nav-link" id="edit-organization-tab" data-toggle="tab" href="#edit" role="tab"
+                  aria-controls="edit" aria-selected="false">View/Delete</a>
+              </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="add" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div id="add-organization-form" class="add-organization-form" style="margin-top: -10px;">
+                  <form id="add-blacklist" action="#" method="post" autocomplete="off">
+                    <br>
+                    <br>
+                    <h3>Add Blacklist Number</h3>
+
+                    <div class="add-blacklist">
+                        <label for="orgContactNumber" class="col-form-label">Mobile Number</label>
+                       <div style="display: flex; align-items: center;">
+                            <span style="margin-right: 10px;">91</span>
+                            <input type="number" class="form-control" id="mobileNumber" name="mobileNumber" placeholder="Enter Mobile Number" required style="flex: 1;" maxlength="10" oninput="this.value=this.value.slice(0,this.maxLength)">
+                        </div>
+                      </div>
+                      <br>
+                      {{!-- <p style="text-align: center; margin-right: 20px;">*Please add the number with 91</p> --}}
+
+                       <div class="add-blacklist">
+                        <label for="orgContactNumber" class="col-form-label">Description</label>
+                        <input type="text" class="form-control" id="description" name="description" value=""
+                          placeholder="Description" required>
+                      </div>
+
+                    <div class="blacklist-btns-wrap">
+                      <br><br>
+                      <input type="button" value="Add" class="btn btn-success" id="addButton"/>
+                      <input type="button" value="Cancel" id="cancelForm" class="btn btn-danger" />
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="view" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div id="upload-organization-form" class="upload-organization-form" style="margin-top: -10px;">
+                  <form id="upload-blacklist" action="#" method="post" autocomplete="off">
+                    <br>
+                    <br>
+                    <h3>Upload Blacklist Number</h3>
+
+                    <div class="upload-blacklist" style="display: flex; flex-direction: column; align-items: center;">
+                        <label for="fileUpload" class="col-form-label" style="width: 100%;">Upload File</label>
+                        <input type="file" class="form-control" id="fileUpload" name="fileUpload"  accept=".txt" required>
+                    </div>
+                    <p style="text-align: center; margin-right: 20px; font-size:10px">Note: Only .txt files are allowed</p>
+
+                       <div class="upload-blacklist">
+                        <label for="orgContactNumber" class="col-form-label">Description</label>
+                        <input type="text" class="form-control" id="uploadDescription" name="uploadDescription" value=""
+                          placeholder="Description" required>
+                      </div>
+
+                    <div class="blacklist-btns-wrap">
+                      <br><br>
+                      <input type="button" value="Upload" class="btn btn-success" id="uploadButton" />
+                      <input type="button" value="Cancel" id="cancelUploadForm" class="btn btn-danger" />
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="nav-contact-tab">
+                 <div id="view-blacklist-form" class="view-blacklist-form" style="margin-top: -10px;">
+                 <form id="view-blacklist" action="#" method="post" autocomplete="off"></form>
+                <br>
+                <br>
+                 <h3>View Blacklist Number</h3>
+
+                 <div class="view-blacklist-card" >
+                    <div class="form-group">
+                        <label for="blacklistMobileNumber" class="col-form-label">Search Mobile Number</label>
+                        <div style="display: flex; align-items: center;">
+                            <span style="margin-right: 10px;">91</span>
+                            <input type="number" class="form-control" id="blacklistMobileNumber" name="blacklistMobileNumber" placeholder="Search Mobile Number" required style="flex: 1;" maxlength="10" oninput="this.value=this.value.slice(0,this.maxLength)">
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary search-view-btn" id="searchButton">Search</button>
+                    {{!-- <button type="submit" class="btn btn-primary search-view-btn">View All</button> --}}
+                </div>
+
+                <table class="table" id="blacklistTable">
+                    <thead>
+                        <tr style="text-align:center;">
+                        <th style="width: 20%;">Phone Number</th>
+                        <th style="width: 65%;">Description</th>
+                        <th style="width: 10%;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be dynamically populated here -->
+                    </tbody>
+                </table>
+
+
+                </form>
+                </div>
+                <div id="edit-organization-form" class="organization-form"></div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-div">
+    <span class="copy float-left">
+      <p id="demo"></p> &copy; All Rights Reserved
+    </span>
+    <span class="float-right">
+      <ul class="social-media-icon">
+        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+      </ul>
+    </span>
+  </div>
+</div>

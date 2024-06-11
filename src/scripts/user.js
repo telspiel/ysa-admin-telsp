@@ -76,7 +76,7 @@ class User {
   updateTokenExpiry() {
     var dt = new Date();
     dt.setTime(dt.getTime() + 10 * 60 * 1000);
-    // expirt time set to 10 min
+    // expiry time set to 10 min
     Cookie.set("tokenResellerExpiry", dt, 7)
   }
 
@@ -133,6 +133,27 @@ class User {
     Cookie.del("resellerJWT");
     return this;
   }
+
+  // Function to load the saved logo image from local storage
+   loadSavedImage() {
+    const loggedInUserName = this.getName();
+    const savedImage = localStorage.getItem(`uploadedImage_${loggedInUserName}`);
+    const $uploadedImage = $('#uploadedImage');
+
+    if (savedImage) {
+      $uploadedImage.attr('src', savedImage).show();
+    } else {
+      $uploadedImage.attr('src', '').hide(); // Hide the image if no image is loaded initially
+    }
+  }
 }
+
+
+
+// Call the function to load the saved image when the document is ready
+$(document).ready(function() {
+  const user = new User();
+  user.loadSavedImage();
+});
 
 export default new User();

@@ -8,25 +8,11 @@ import Alert from "./../../scripts/alert";
 
 const table = require("./../../partials/table.hbs");
 
-console.log("Add Logo");
+// console.log("Add Logo");
 
 if (!User.isLoggedIn()) {
   window.location.href = "/login";
 }
-
-// Function to load the saved image from local storage
-function loadSavedImage() {
-  const loggedInUserName = User.getName();
-  const savedImage = localStorage.getItem(`uploadedImage_${loggedInUserName}`);
-  if (savedImage) {
-    $('#uploadedImage').attr('src', savedImage);
-  }
-}
-
-// Call the function to load the saved image when the document is ready
-$(document).ready(function() {
-  loadSavedImage();
-});
 
 $("#fileUpload").click(function (e) {
   const file = $("#selectFile").get(0).files[0];
@@ -36,7 +22,7 @@ $("#fileUpload").click(function (e) {
     return;
   }
   const formData = new FormData();
-  formData.append("loggedInUserName", User.getName()); //getting the logo image by the username
+  formData.append("loggedInUserName", User.getName());
   // formData.append("fileType", $("input[name=fileType]:checked").val());
   formData.append("file", file);
   // $("#controls-form")[0].reset();
@@ -51,8 +37,11 @@ $("#fileUpload").click(function (e) {
       $("#controls-form")[0].reset();
       $(".custom-file-label").html('Choose file');
       if (data.result === "Success") {
+//        fileName = data.data.fileName;
         console.log("Image uploaded successfully");
+      }
 
+ if (data.result === "Success") {
         // Display the uploaded image
         const imageUrl = URL.createObjectURL(file);
 
@@ -66,15 +55,6 @@ $("#fileUpload").click(function (e) {
 
         // Show the image
         $("#uploadedImage").replaceWith(uploadedImage);
-
-        // Save the uploaded image to local storage
-        const loggedInUserName = User.getName();
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          const result = e.target.result;
-          localStorage.setItem(`uploadedImage_${loggedInUserName}`, result);
-        };
-        reader.readAsDataURL(file);
 
         console.log("Image uploaded successfully");
       }
